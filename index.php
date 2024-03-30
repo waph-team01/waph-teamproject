@@ -10,7 +10,7 @@ if (isset($_POST["username"]) and isset($_POST["password"])) {
 }
 }
 function checklogin_mysql($username, $password) {
-    $mysqli = new mysqli('localhost', 'nakkantm', 'Pa$$w0rd', 'waph');
+    $mysqli = new mysqli('localhost', 'team01', 'Pa$$w0rd', 'waph_team');
     if ($mysqli->connect_error) {
         die("Connection failed: " . $mysqli->connect_error);
     }
