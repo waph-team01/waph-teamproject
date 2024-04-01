@@ -90,12 +90,14 @@ Duration: 22/03/2024-03/31/2024
 **(i) database-account.sql code**
 
 create database waph_team;
+
 CREATE USER 'team01'@'localhost' IDENTIFIED BY 'Pa$$w0rd';
 GRANT ALL ON waph_team.* TO 'team01'@'localhost';
 
 **(ii) database-data.sql code**
 
 drop table if exists `users`;
+
 create table users(
   user_id INT AUTO_INCREMENT PRIMARY KEY,
 username varchar(50) ,
@@ -146,6 +148,7 @@ UNLOCK tables;
 **(iii) form.php code**
 
 <form action="index.php" method="POST" class="form login">
+	
 	Username:<input type="text" class="text_feild" name="username" /> <br>
 	Password: <input type="password" class="text_feild" name="password" /> <br>
 	<button class="button" type="submit">
