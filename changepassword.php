@@ -21,3 +21,6 @@ if (isset($username) && isset($newPassword)) {
     echo "No username/password provided!";
 }
 ?>
+<form action="form.php" method="GET">
+    <button type="submit">Go back to login page</button>
+</form>
