@@ -44,7 +44,7 @@
     Full Name: <input type="text" class="text_field" name="fullName" required><br>
     Email: <input type="email" class="text_field" name="email" required placeholder="username@example.com"><br>
     Password: <input type="password" class="text_field" name="password" required><br>
-    Phone Number: <input type="tel" class="text_field" name="phone" required pattern="[0-9]{10}" title="Please enter a 10-digit phone number"><br>
+    Phone Number: <input type="tel" class="text_field" name="phoneNumber" required pattern="[0-9]{10}" title="Please enter a 10-digit phone number"><br>
     <button class="button" type="submit">Register</button>
   </form>
 </body>
