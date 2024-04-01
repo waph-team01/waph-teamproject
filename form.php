@@ -5,7 +5,6 @@
         Login
     </button>
 </form>
-
-<a href="registrationform.php" class="button">
-    New User Registration
-</a>
+<button class="button" onclick="window.location.href='registrationform.php';">
+        New User Registration
+    </button>
