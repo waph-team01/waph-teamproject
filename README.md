@@ -17,10 +17,6 @@ Source code repository (private access): [Click_here](https://github.com/waph-te
 
 Project homepage (public): [Click_here](https://github.com/waph-team01/waph-team01.github.io)
 
-#**Team members headshot**
-<img src="Images/Sprint0/Tulasiram.jpg" alt="Tulasiram" width="150" height="150"> <img src="Images/Sprint0/Vihasith.jpg" alt="Vihasith" width="150" height="150"> <img src="Images/Sprint0/Grahika.jpg" alt="Grahika" width="150" height="150"> <img src="Images/Sprint0/sandeep.jpg" alt="Sandeep" width="150" height="150">
-
-
 
 ## Revision History
 
@@ -35,135 +31,236 @@ The mian task of the WAPH procject deals about an inclusive development of a web
 
 # System Analysis
 
-For the initial phase of the project we developed the website using the system config file which is being used and edited for the WAPH-team project file. Hosts file in etc folder is udpated with the public url waph-team01.minifacebook.com adjacent to the I.P Address. After the creation of the website the web application is being accessed by our team members and the below demo screenshots are provided below. 
+For the initial phase of the project we developed the website using the system config file which is being used and edited for the WAPH-team project file. Hosts file in etc folder is udpated with the public url waph-team01.minifacebook.com adjacent to the I.P Address. After the creation of the website the web application is being accessed by our team members and the  demo screenshots are provided below. 
 
+# Snippets of the test pages (Demo)
 
+![admin login](Images/Sprint0/admin.png)
 
-## High-level Requirements
+![Team01_Personal_Page](Images/Sprint0/personalpage.png)
 
-List high-level requirements of the project that your team will develop into use cases in later steps
+![test page of nakkantm](Images/Sprint0/Tulasiram1.png)
 
-# System Design
+![test page of rasalavh](Images/Sprint0/rasalavh1.png)
 
-_(Start from Sprint 1, keep updating)_
+![test page of rampudga](Images/Sprint0/rampudga1.jpeg)
 
-## Use-Case Realization
+![test page of pashamsp](Images/Sprint0/pashamsp1.png)
 
-## Database 
-
-## User Interface
-
-# Implementation
-
-_(Start from Sprint 1, keep updating. However, it is important to prepare the technology from Sprint 0)_
-
-For each new sprint cycle, update the implementation of your system (break it down into subsections). Please include some code snippets to illustrate the implementation.
-
-Specify your team's development approach, including programming languages, databases, development, testing, and deployment environments. 
-
-# Security analysis
-
-_Include a brief explanation of your implementation and the security aspects based on the following questions:_
-
-*  How did you apply the security programming principles in your project?
-*  What database security principles have you used in your project?
-*  Is your code robust and defensive? How?
-*  How did you defend your code against known attacks such as XSS, SQL Injection, CSRF, Session Hijacking
-*   How do you separate the roles of super users and regular users?
-
-# Demo (screenshots)
-
-_You need to capture screenshots to demonstrate how your web application works. The screenshots must be accompanied by a short description of its functionalities following the implementation as below:_
-
-*   Everyone can register a new account and then login
-*   Superuser can disable an account
-    *   The disabled account cannot log in 
-    *   Superuser can enable the disabled account
-    *   The enabled user can log in	
-*   A regular logged-in user can delete her own existing posts but cannot delete the posts of others
-*   CSRF attack to delete a post should be detected and prevented
-*   A regular logged-in user cannot access the link for superusers
-*   A logged-in user can have a real-time chat with other logged-in users
 
 # Software Process Management
 
-_(Start from Sprint 0, keep updating)_
-
-Introduce how your team uses a software management process, e.g., Scrum, and how your teamwork collaborates.
+_(starting from sprint 0, and updates)_
 
 ## Scrum process
 
+Our team, comprised of four classmates, employs a combination of WhatsApp and face-to-face interactions to facilitate our website development endeavors. WhatsApp serves as our primary communication platform, enabling quick exchanges and discussions, while physical meetings provide opportunities for more in-depth brainstorming sessions. Additionally, we utilize collaborative notes accessible to all team members, serving as a central hub for project-related discussions, idea generation, and progress tracking. This collaborative environment fosters creativity and ensures everyone's input is heard and considered. By leveraging these communication channels effectively, we maintain alignment on project goals, distribute tasks efficiently, and address challenges collaboratively. Our collective efforts are focused on driving the website development forward, harnessing the diverse skills and perspectives of each team member to achieve our shared vision for the project's success.
+
 ### Sprint 0
 
-Duration: DD/MM/YYYY-DD/MM/YYYY
+Duration: 22/03/2024-03/31/2024
 
 #### Completed Tasks: 
 
-1. Task 1
-2. Task 2
-3. ...
+1. Our team has successfully established both public and private repositories named "waph-teamproject" and "waph-team01.github.io" correspondingly.
+2. SSL certificates and keys for the team project have been generated.
+3. HTTPS has been configured within the local domain name to ensure secure communication.
+4. A database has been set up for the system.
+5. Individual home pages have been developed for all team members, and their respective lab files have been transferred to the team directory.
+6. Testing of the index.html page has been carried out, yielding the anticipated performance and functionality as observed during the tests.
 
 #### Contributions: 
 
-1. Member 1, x commits, y hours, contributed in xxx
-2. Member 2, x commits, y hours, contributed in xxx
-3. Member 3, x commits, y hours, contributed in xxx
-4. Member 4, x commits, y hours, contributed in xxx
-
-### Sprint 1
-
-Duration: MM/DD/YYYY-MM/DD/YYYY
-
-#### Completed Tasks: 
-
-1. Task 1
-2. Task 2
-3. ...
-
-#### Contributions: 
-
-1. Member 1, x commits, y hours, contributed in xxx
-2. Member 2, x commits, y hours, contributed in xxx
-3. Member 3, x commits, y hours, contributed in xxx
-4. Member 4, x commits, y hours, contributed in xxx
-
-#### Sprint Retrospection:
-
-_(Introduction to Sprint Retrospection:
-
-_Working through the sprints is a continuous improvement process. Discussing the completed sprint can improve the next sprint walk through a much more efficient one. Sprint retrospection is done once a sprint is finished and the team is ready to start another sprint planning meeting. This discussion can take up to 1 hour depending on the ideal team size of 4 members. 
-Discussing good things that happened during the sprint can improve the team's morale, good team collaboration, appreciating someone who did a fantastic job solving a blocker issue, work well-organized, and helping someone in need. This will improve the team's confidence and keep them motivated.
-As a team, we can discuss what has gone wrong during the sprint and come up with improvement points for the next sprints. Few points can be like, need to manage time well, need to prioritize the tasks properly and finish a task in time, incorrect design lead to multiple reviews and that wasted time during the sprint, team meetings were too long which consumed most of the effective work hours. We can mention every problem is in the sprint which is hindering the progress.
-Finally, this meeting should improve your next sprint drastically and understand the team dynamics well. Mention the bullet points and discuss how to solve it.)_
-
-| Good     |   Could have been better    |  How to improve?  |
-|----------|:---------------------------:|------------------:|
-|          |                             |                   |
-
-
-### Sprint x
-
-Duration: MM/DD/YYYY-MM/DD/YYYY
-
-#### Completed Tasks: 
-
-1. Task 1
-2. Task 2
-3. ...
-
-#### Contributions: 
-
-1. Member 1, x commits, y hours, contributed in xxx
-2. Member 2, x commits, y hours, contributed in xxx
-3. Member 3, x commits, y hours, contributed in xxx
-4. Member 4, x commits, y hours, contributed in xxx
-
-#### Sprint Retrospection: 
-
-| Good     |   Could have been better    |  How to improve?  |
-|----------|:---------------------------:|------------------:|
-|          |                             |                   |
+1. Tulasiram Nakkanaboina, 11 commits, 7 hours, contributed in generating the SSL keys and certificates. 
+2. Vihasith Rasala, 8 commits, 6 hours, contributed in documentation of README file and organizing the data.
+3. Grahika Rampudi, 8 commits, 7 hours, contributed in creating the personal page of our team which includes details of our team members.
+4. Sai Sandeep Pasham, 7 commits, 6 hours, contributed in creating the database-data.sql, index.html page which includes the details of admin login. 
 
 # Appendix
 
-Include the content (in text, not as images) of the SQL files and all source code of your PHP files (with the file name). 
+**(i) database-account.sql code**
+
+```SQL
+create database waph_team;
+
+CREATE USER 'team01'@'localhost' IDENTIFIED BY 'Pa$$w0rd';
+GRANT ALL ON waph_team.* TO 'team01'@'localhost';
+```
+
+**(ii) database-data.sql code**
+
+```SQL
+drop table if exists `users`;
+
+create table users(
+  user_id INT AUTO_INCREMENT PRIMARY KEY,
+username varchar(50) ,
+password varchar(100) NOT NULL,
+  fullname varchar(100),
+  otheremail varchar(100),
+  phone varchar(10));
+drop table if exists `superusers`;
+CREATE TABLE superusers (
+    superuser_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+drop table if exists `messages`;
+CREATE TABLE messages (
+    message_id INT AUTO_INCREMENT PRIMARY KEY,
+    message TEXT NOT NULL,
+    user_id INT,
+    time_stamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+drop table if exists `posts`;
+CREATE TABLE posts (
+    post_id INT AUTO_INCREMENT PRIMARY KEY,
+    post_type VARCHAR(50),
+    title varchar(100) NOT NULL,
+    user_id INT,
+  posttime varchar(100),
+    time_stamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+drop table if exists `comments`;
+CREATE TABLE comments (
+    comment_id INT AUTO_INCREMENT PRIMARY KEY,
+    post_id INT,
+    user_id INT,
+    comment TEXT NOT NULL,
+    time_stamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (post_id) REFERENCES posts(post_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+LOCK tables `users` WRITE;
+INSERT INTO users(username,password) VALUES ('admin',md5('Pa$$w0rd'));
+INSERT INTO users(username,password) VALUES ('test',md5('Pa$$w0rd'));
+UNLOCK tables;```
+
+**(iii) form.php code**
+
+```HTML
+<form action="index.php" method="POST" class="form login">
+	
+	Username:<input type="text" class="text_feild" name="username" /> <br>
+	Password: <input type="password" class="text_feild" name="password" /> <br>
+	<button class="button" type="submit">
+		Login
+	</button>
+```
+
+**(iv) index.html code**
+
+```HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+  
+        .team-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .team-member {
+            margin-bottom: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member img {
+            float: left;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .team-member-details {
+            padding: 20px;
+        }
+
+        .team-member-details h2 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            color: #333; /* Updated color */
+        }
+
+        .team-member-details p {
+            margin-bottom: 20px;
+            color: #666; /* Updated color */
+        }
+
+        .team-member-details a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .team-member-details a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+	
+    <div class="team-container">
+        <!-- Team member 1 -->
+        <div class="team-member">
+            <img src="images/tulasiram-headshot.jpg" alt="Tulasiram Nakkanaboina">
+            <div class="team-member-details">
+                <h2>Tulasiram Nakkanaboina</h2>
+                <p>Interested in Java Backend Development</p>
+                <a href="https://nakkantm-uc.github.io//">Personal Homepage</a>
+            </div>
+        </div>
+
+        <!-- Team member 2 -->
+        <div class="team-member">
+            <img src="images/grahika.jpg" alt="Grahika Rampudi">
+            <div class="team-member-details">
+                <h2>Grahika Rampudi</h2>
+                <p>Passionate about Frontend Development</p>
+                <a href="https://rampudga.github.io/">Personal Homepage</a>
+            </div>
+        </div>
+
+        <!-- Team member 3 -->
+        <div class="team-member">
+            <img src="images/sandeep.jpg" alt="Sai Sandeep Pasham">
+            <div class="team-member-details">
+                <h2>Sai Sandeep Pasham</h2>
+                <p>Fascinated by Database Management</p>
+                <a href="https://pashamsp.github.io/">Personal Homepage</a>
+            </div>
+        </div>
+
+        <!-- Team member 4 -->
+        <div class="team-member">
+            <img src="images/rasalavh-headshot.jpg" alt="Vihasith Rasala">
+            <div class="team-member-details">
+                <h2>Vihasith Rasala</h2>
+                <p>Professional Graphic Designer</p>
+                <a href="https://Vihasith137.github.io/">Personal Homepage</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+'''
