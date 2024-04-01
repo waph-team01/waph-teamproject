@@ -37,7 +37,7 @@ The mian task of the WAPH procject deals about an inclusive development of a web
 
 For the initial phase of the project we developed the website using the system config file which is being used and edited for the WAPH-team project file. Hosts file in etc folder is udpated with the public url waph-team01.minifacebook.com adjacent to the I.P Address. After the creation of the website the web application is being accessed by our team members and the  demo screenshots are provided below. 
 
-### Snippets of the test pages
+# Snippets of the test pages (Demo)
 
 <img src="Images/Sprint0/admin.png" alt="admin login">
 <img src="Images/Sprint0/personalpage.png" alt="Team01_Personal_Page">
@@ -79,99 +79,32 @@ _Include a brief explanation of your implementation and the security aspects bas
 *  How did you defend your code against known attacks such as XSS, SQL Injection, CSRF, Session Hijacking
 *   How do you separate the roles of super users and regular users?
 
-# Demo (screenshots)
-
-_You need to capture screenshots to demonstrate how your web application works. The screenshots must be accompanied by a short description of its functionalities following the implementation as below:_
-
-*   Everyone can register a new account and then login
-*   Superuser can disable an account
-    *   The disabled account cannot log in 
-    *   Superuser can enable the disabled account
-    *   The enabled user can log in	
-*   A regular logged-in user can delete her own existing posts but cannot delete the posts of others
-*   CSRF attack to delete a post should be detected and prevented
-*   A regular logged-in user cannot access the link for superusers
-*   A logged-in user can have a real-time chat with other logged-in users
-
 # Software Process Management
 
-_(Start from Sprint 0, keep updating)_
-
-Introduce how your team uses a software management process, e.g., Scrum, and how your teamwork collaborates.
+_(starting from sprint 0, and updates)_
 
 ## Scrum process
-
+to be written
 ### Sprint 0
 
-Duration: DD/MM/YYYY-DD/MM/YYYY
+Duration: 22/03/2024-03/31/2024
 
 #### Completed Tasks: 
 
-1. Task 1
-2. Task 2
-3. ...
+1. Our team has successfully established both public and private repositories named "waph-teamproject" and "waph-team01.github.io" correspondingly.
+2. SSL certificates and keys for the team project have been generated.
+3. HTTPS has been configured within the local domain name to ensure secure communication.
+4. A database has been set up for the system.
+5. Individual home pages have been developed for all team members, and their respective lab files have been transferred to the team directory.
+6. Testing of the index.html page has been carried out, yielding the anticipated performance and functionality as observed during the tests.
 
 #### Contributions: 
 
-1. Member 1, x commits, y hours, contributed in xxx
-2. Member 2, x commits, y hours, contributed in xxx
-3. Member 3, x commits, y hours, contributed in xxx
-4. Member 4, x commits, y hours, contributed in xxx
-
-### Sprint 1
-
-Duration: MM/DD/YYYY-MM/DD/YYYY
-
-#### Completed Tasks: 
-
-1. Task 1
-2. Task 2
-3. ...
-
-#### Contributions: 
-
-1. Member 1, x commits, y hours, contributed in xxx
-2. Member 2, x commits, y hours, contributed in xxx
-3. Member 3, x commits, y hours, contributed in xxx
-4. Member 4, x commits, y hours, contributed in xxx
-
-#### Sprint Retrospection:
-
-_(Introduction to Sprint Retrospection:
-
-_Working through the sprints is a continuous improvement process. Discussing the completed sprint can improve the next sprint walk through a much more efficient one. Sprint retrospection is done once a sprint is finished and the team is ready to start another sprint planning meeting. This discussion can take up to 1 hour depending on the ideal team size of 4 members. 
-Discussing good things that happened during the sprint can improve the team's morale, good team collaboration, appreciating someone who did a fantastic job solving a blocker issue, work well-organized, and helping someone in need. This will improve the team's confidence and keep them motivated.
-As a team, we can discuss what has gone wrong during the sprint and come up with improvement points for the next sprints. Few points can be like, need to manage time well, need to prioritize the tasks properly and finish a task in time, incorrect design lead to multiple reviews and that wasted time during the sprint, team meetings were too long which consumed most of the effective work hours. We can mention every problem is in the sprint which is hindering the progress.
-Finally, this meeting should improve your next sprint drastically and understand the team dynamics well. Mention the bullet points and discuss how to solve it.)_
-
-| Good     |   Could have been better    |  How to improve?  |
-|----------|:---------------------------:|------------------:|
-|          |                             |                   |
-
-
-### Sprint x
-
-Duration: MM/DD/YYYY-MM/DD/YYYY
-
-#### Completed Tasks: 
-
-1. Task 1
-2. Task 2
-3. ...
-
-#### Contributions: 
-
-1. Member 1, x commits, y hours, contributed in xxx
-2. Member 2, x commits, y hours, contributed in xxx
-3. Member 3, x commits, y hours, contributed in xxx
-4. Member 4, x commits, y hours, contributed in xxx
-
-#### Sprint Retrospection: 
-
-| Good     |   Could have been better    |  How to improve?  |
-|----------|:---------------------------:|------------------:|
-|          |                             |                   |
+1. Tulasiram Nakkanaboina, 11 commits, 7 hours, contributed in generating the SSL keys and certificates. 
+2. Vihasith Rasala, 8 commits, 6 hours, contributed in documentation of README file and organizing the data.
+3. Grahika Rampudi, 8 commits, 7 hours, contributed in creating the personal page of our team which includes details of our team members.
+4. Sai Sandeep Pasham, 6 commits, 9 hours, contributed in creating the index.html page which includes the details of admin login. 
 
 # Appendix
 
-Include the content (in text, not as images) of the SQL files and all source code of your PHP files (with the file name). 
+upload code screenshots
