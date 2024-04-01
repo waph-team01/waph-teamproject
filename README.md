@@ -35,8 +35,15 @@ The mian task of the WAPH procject deals about an inclusive development of a web
 
 # System Analysis
 
-For the initial phase of the project we developed the website using the system config file which is being used and edited for the WAPH-team project file. Hosts file in etc folder is udpated with the public url waph-team01.minifacebook.com adjacent to the I.P Address. After the creation of the website the web application is being accessed by our team members and the below demo screenshots are provided below. 
+For the initial phase of the project we developed the website using the system config file which is being used and edited for the WAPH-team project file. Hosts file in etc folder is udpated with the public url waph-team01.minifacebook.com adjacent to the I.P Address. After the creation of the website the web application is being accessed by our team members and the  demo screenshots are provided below. 
 
+### Snippets of the test pages
+
+<img src="Images/Sprint0/admin.png" alt="admin login">
+<img src="Images/Sprint0/Tulasiram1.png" alt="test page of nakkantm">
+<img src="Images/Sprint0/rasalavh1.png" alt="test page of rasalavh">
+<img src="Images/Sprint0/rampudga1.jpeg" alt="test page of rampudga">
+<img src="Images/Sprint0/pashamsp.png" alt="test page of pashamsp">
 
 
 ## High-level Requirements
