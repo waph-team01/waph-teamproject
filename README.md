@@ -43,7 +43,7 @@ For the initial phase of the project we developed the website using the system c
 <img src="Images/Sprint0/Tulasiram1.png" alt="test page of nakkantm">
 <img src="Images/Sprint0/rasalavh1.png" alt="test page of rasalavh">
 <img src="Images/Sprint0/rampudga1.jpeg" alt="test page of rampudga">
-<img src="Images/Sprint0/pashamsp.png" alt="test page of pashamsp">
+<img src="Images/Sprint0/pashamsp1.png" alt="test page of pashamsp">
 
 
 ## High-level Requirements
