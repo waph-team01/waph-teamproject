@@ -1,7 +1,7 @@
 drop table if exists `users`;
 create table users(
   user_id INT AUTO_INCREMENT PRIMARY KEY,
-username varchar(50) PRIMARY KEY,
+username varchar(50) ,
 password varchar(100) NOT NULL,
   fullname varchar(100),
   otheremail varchar(100),
