@@ -1,17 +1,21 @@
 <?php 
 	require "database.php";
 	$username = $_POST["username"];
+	$fullName = $_POST["fullName"];
+	$email = $_POST["email"]; 
 	$password = $_POST["password"];
-	if(isset($username) and isset($password)){
-		//echo "Debug> got username=$username;got password=$password";
-		if(addnewuser($username, $password)){
-			echo "Registration Succeed";
+	$phoneNumber = $_POST["phoneNumber"];
+	if(isset($username) && isset($password) && isset($fullName) && isset($email) && isset($phoneNumber)){
+		if(addnewuser($username, $fullName, $email, $password, $phoneNumber)){
+			echo "Registration Succeeded";
  		}else{
-		echo "Registartion Failed!";
+			echo "Registration Failed!";
+		}
 	}
-}
-else{
-	echo " No username/password provided! ";
-}
-
+	else{
+		echo "No username/password/email/phoneNumber/fullName provided!";
+	}
 ?>
+<form action="form.php" method="GET">
+    <button type="submit">Go back to login page</button>
+</form>
