@@ -64,6 +64,7 @@ _(starting from sprint 0, and updates)_
 ## Scrum process
 
 Our team, comprised of four classmates, employs a combination of WhatsApp and face-to-face interactions to facilitate our website development endeavors. WhatsApp serves as our primary communication platform, enabling quick exchanges and discussions, while physical meetings provide opportunities for more in-depth brainstorming sessions. Additionally, we utilize collaborative notes accessible to all team members, serving as a central hub for project-related discussions, idea generation, and progress tracking. This collaborative environment fosters creativity and ensures everyone's input is heard and considered. By leveraging these communication channels effectively, we maintain alignment on project goals, distribute tasks efficiently, and address challenges collaboratively. Our collective efforts are focused on driving the website development forward, harnessing the diverse skills and perspectives of each team member to achieve our shared vision for the project's success.
+
 ### Sprint 0
 
 Duration: 22/03/2024-03/31/2024
