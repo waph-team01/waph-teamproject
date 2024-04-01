@@ -1,5 +1,5 @@
 <?php
-	require "session_auth.php";
+	require "sessionauthentication.php";
 	require "database.php";
 	$token= $_POST['nocsrftoken'];
 	if(!isset($token) or $token!=$_SESSION['nocsrftoken']){
