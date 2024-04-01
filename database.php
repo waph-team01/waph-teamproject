@@ -5,7 +5,7 @@ $mysqli=  new mysqli('localhost','waph_team01','waph@uc!2024','waph_team');
 			return FALSE;
 		}
 	function addnewuser($username, $password){
-		global mysqli;
+		global $mysqli;
 		$prepared_sql = "INSERT INTO users(username,password) VALUES(?,md5(?));";
 		$stmt = $mysqli->prepare($prepared_sql);
 		$stmt->bind_param("ss", $username,$password);
