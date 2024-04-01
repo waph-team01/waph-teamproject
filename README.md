@@ -18,10 +18,8 @@ Source code repository (private access): [Click_here](https://github.com/waph-te
 Project homepage (public): [Click_here](https://github.com/waph-team01/waph-team01.github.io)
 
 #**Team members headshot**
-![Tulasiram](Images/Sprint0/Tulasiram.jpg){width=150px height=150px}
-![Vihasith](Images/Sprint0/Vihasith.jpg){width=150px height=150px}
-![Grahika](Images/Sprint0/Grahika.jpg){width=150px height=150px}
-![Sandeep](Images/Sprint0/sandeep.jpg){width=150px height=150px}
+<img src="Images/Sprint0/Tulasiram.jpg" alt="Tulasiram" width="150" height="150"> <img src="Images/Sprint0/Vihasith.jpg" alt="Vihasith" width="150" height="150"> <img src="Images/Sprint0/Grahika.jpg" alt="Grahika" width="150" height="150"> <img src="Images/Sprint0/sandeep.jpg" alt="Sandeep" width="150" height="150">
+
 
 
 ## Revision History
