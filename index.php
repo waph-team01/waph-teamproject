@@ -33,5 +33,5 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
 }
 ?>
 <h2> Welcome <?php echo htmlentities($_SESSION['usernaem']); ?> !</h2>
-<a href="changepassword.php">Change password</a> | <a href="edituser.php">Edit profile</a> | <a href ="logout.php">logout
+<a href="changepasswordform.php">Change password</a> | <a href="edituser.php">Edit profile</a> | <a href ="logout.php">logout
 </a>
