@@ -17,10 +17,12 @@ Source code repository (private access): [Click_here](https://github.com/waph-te
 
 Project homepage (public): [Click_here](https://github.com/waph-team01/waph-team01.github.io)
 
-#**Team members headshot**
+# Team members headshot
 
-<img src="Images/Sprint0/Tulasiram.jpg" alt="Tulasiram" width="150" height="150"> <img src="Images/Sprint0/Vihasith.jpg" alt="Vihasith" width="150" height="150"> <img src="Images/Sprint0/Grahika.jpg" alt="Grahika" width="150" height="150"> <img src="Images/Sprint0/sandeep.jpg" alt="Sandeep" width="150" height="150">
-
+![Tulasiram](Images/Sprint0/Tulasiram.jpg)
+![Vihasith](Images/Sprint0/Vihasith.jpg)
+![Grahika](Images/Sprint0/Grahika.jpg)
+![Sandeep](Images/Sprint0/sandeep.jpg)
 
 
 ## Revision History
@@ -40,13 +42,12 @@ For the initial phase of the project we developed the website using the system c
 
 # Snippets of the test pages (Demo)
 
-<img src="Images/Sprint0/admin.png" alt="admin login">
-<img src="Images/Sprint0/personalpage.png" alt="Team01_Personal_Page">
-<img src="Images/Sprint0/Tulasiram1.png" alt="test page of nakkantm">
-<img src="Images/Sprint0/rasalavh1.png" alt="test page of rasalavh">
-<img src="Images/Sprint0/rampudga1.jpeg" alt="test page of rampudga">
-<img src="Images/Sprint0/pashamsp1.png" alt="test page of pashamsp">
-
+![admin login](Images/Sprint0/admin.png)
+![Team01_Personal_Page](Images/Sprint0/personalpage.png)
+![test page of nakkantm](Images/Sprint0/Tulasiram1.png)
+![test page of rasalavh](Images/Sprint0/rasalavh1.png)
+![test page of rampudga](Images/Sprint0/rampudga1.jpeg)
+![test page of pashamsp](Images/Sprint0/pashamsp1.png)
 
 
 # Security analysis
