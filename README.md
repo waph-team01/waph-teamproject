@@ -103,7 +103,7 @@ Duration: 22/03/2024-03/31/2024
 1. Tulasiram Nakkanaboina, 11 commits, 7 hours, contributed in generating the SSL keys and certificates. 
 2. Vihasith Rasala, 8 commits, 6 hours, contributed in documentation of README file and organizing the data.
 3. Grahika Rampudi, 8 commits, 7 hours, contributed in creating the personal page of our team which includes details of our team members.
-4. Sai Sandeep Pasham, 6 commits, 9 hours, contributed in creating the index.html page which includes the details of admin login. 
+4. Sai Sandeep Pasham, 7 commits, 6 hours, contributed in creating the database-data.sql, index.html page which includes the details of admin login. 
 
 # Appendix
 
