@@ -41,7 +41,7 @@
     title="Email address is required as username"
     placeholder="username in email"
     onchange="this.setCustomerValidity(this.validity.patternMismatch?this.title: '');" /> <br>
-    Full Name: <input type="text" class="text_field" name="Full Name" required><br>
+    Full Name: <input type="text" class="text_field" name="fullName" required><br>
     Email: <input type="email" class="text_field" name="email" required placeholder="username@example.com"><br>
     Password: <input type="password" class="text_field" name="password" required><br>
     Phone Number: <input type="tel" class="text_field" name="phone" required pattern="[0-9]{10}" title="Please enter a 10-digit phone number"><br>
