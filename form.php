@@ -4,7 +4,8 @@
     <button class="button" type="submit">
         Login
     </button>
-    <button class="button" onclick="window.location.href='registrationform.php';"> <!-- Changed onclick to correctly navigate -->
-        New User Registration
-    </button>
 </form>
+
+<a href="registrationform.php" class="button">
+    New User Registration
+</a>
