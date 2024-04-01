@@ -138,11 +138,11 @@ CREATE TABLE comments (
     FOREIGN KEY (post_id) REFERENCES posts(post_id),
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
-
 LOCK tables `users` WRITE;
 INSERT INTO users(username,password) VALUES ('admin',md5('Pa$$w0rd'));
 INSERT INTO users(username,password) VALUES ('test',md5('Pa$$w0rd'));
 UNLOCK tables;
+
 **(iii) form.php code**
 
 <form action="index.php" method="POST" class="form login">
@@ -167,13 +167,11 @@ UNLOCK tables;
             color: #333;
             line-height: 1.6;
         }
-  
         .team-container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
-
         .team-member {
             margin-bottom: 30px;
             background-color: #fff;
@@ -181,7 +179,6 @@ UNLOCK tables;
             overflow: hidden;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
         .team-member img {
             float: left;
             width: 120px;
@@ -190,27 +187,22 @@ UNLOCK tables;
             border-radius: 50%;
             margin-right: 20px;
         }
-
         .team-member-details {
             padding: 20px;
         }
-
         .team-member-details h2 {
             margin-bottom: 10px;
             font-size: 1.5em;
             color: #333; /* Updated color */
         }
-
         .team-member-details p {
             margin-bottom: 20px;
             color: #666; /* Updated color */
         }
-
         .team-member-details a {
             color: #007bff;
             text-decoration: none;
         }
-
         .team-member-details a:hover {
             text-decoration: underline;
         }
@@ -227,7 +219,6 @@ UNLOCK tables;
                 <a href="https://nakkantm-uc.github.io//">Personal Homepage</a>
             </div>
         </div>
-
         <!-- Team member 2 -->
         <div class="team-member">
             <img src="images/grahika.jpg" alt="Grahika Rampudi">
@@ -237,7 +228,6 @@ UNLOCK tables;
                 <a href="https://rampudga.github.io/">Personal Homepage</a>
             </div>
         </div>
-
         <!-- Team member 3 -->
         <div class="team-member">
             <img src="images/sandeep.jpg" alt="Sai Sandeep Pasham">
@@ -247,7 +237,6 @@ UNLOCK tables;
                 <a href="https://pashamsp.github.io/">Personal Homepage</a>
             </div>
         </div>
-
         <!-- Team member 4 -->
         <div class="team-member">
             <img src="images/rasalavh-headshot.jpg" alt="Vihasith Rasala">
@@ -257,7 +246,6 @@ UNLOCK tables;
                 <a href="https://Vihasith137.github.io/">Personal Homepage</a>
             </div>
         </div>
-
     </div>
 </body>
 </html>
