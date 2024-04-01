@@ -8,7 +8,7 @@ function addnewuser($username, $password, $fullname, $otheremail, $phone){
 		global $mysqli;
 		$prepared_sql = "INSERT INTO users(username,password,fullname,otheremail,phone) VALUES(?,md5(?),?,?,?);";
 		$stmt = $mysqli->prepare($prepared_sql);
-		$stmt->bind_param("ss", $username,$password,$fullname,$otheremail,$phone);
+		$stmt->bind_param("sssss", $username,$password,$fullname,$otheremail,$phone);
 		if($stmt->execute())return TRUE;
 		return FALSE;
 	}
