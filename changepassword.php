@@ -3,7 +3,7 @@
 	require "database.php";
 	$token= $_POST['nocsrftoken'];
 	if(!isset($token) or $token!=$_SESSION['nocsrftoken']){
-		echo="CSRF Attack is detected";
+		echo "CSRF Attack is detected";
 		die();
 	}
 	$username= $_SESSION['username'];
