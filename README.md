@@ -89,13 +89,16 @@ Duration: 22/03/2024-03/31/2024
 
 **(i) database-account.sql code**
 
+```SQL
 create database waph_team;
 
 CREATE USER 'team01'@'localhost' IDENTIFIED BY 'Pa$$w0rd';
 GRANT ALL ON waph_team.* TO 'team01'@'localhost';
+```
 
 **(ii) database-data.sql code**
 
+```SQL
 drop table if exists `users`;
 
 create table users(
@@ -143,10 +146,11 @@ CREATE TABLE comments (
 LOCK tables `users` WRITE;
 INSERT INTO users(username,password) VALUES ('admin',md5('Pa$$w0rd'));
 INSERT INTO users(username,password) VALUES ('test',md5('Pa$$w0rd'));
-UNLOCK tables;
+UNLOCK tables;```
 
 **(iii) form.php code**
 
+```HTML
 <form action="index.php" method="POST" class="form login">
 	
 	Username:<input type="text" class="text_feild" name="username" /> <br>
@@ -154,9 +158,11 @@ UNLOCK tables;
 	<button class="button" type="submit">
 		Login
 	</button>
+```
 
 **(iv) index.html code**
 
+```HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -266,3 +272,4 @@ UNLOCK tables;
     </div>
 </body>
 </html>
+'''
