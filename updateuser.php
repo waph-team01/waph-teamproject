@@ -6,10 +6,10 @@
 	$password = $_POST["password"];
 	$phoneNumber = $_POST["phoneNumber"];
 	if(isset($username) && isset($password) && isset($fullName) && isset($email) && isset($phoneNumber)){
-		if(addnewuser($username, $fullName, $email, $password, $phoneNumber)){
-			echo "Registration Succeeded";
+		if(updateuser($username, $fullName, $email, $password, $phoneNumber)){
+			echo "Profile Update Succeeded";
  		}else{
-			echo "Registration Failed!";
+			echo "Profile Update Failed!";
 		}
 	}
 	else{
