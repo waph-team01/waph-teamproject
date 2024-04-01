@@ -4,3 +4,6 @@
 	<button class="button" type="submit">
 		Login
 	</button>
+	<button class="button" onclick="/registrationform.php">
+		New User Registration
+	</button>
