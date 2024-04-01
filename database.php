@@ -12,6 +12,14 @@ function addnewuser($username, $fullname, $otheremail, $password,  $phone){
 		if($stmt->execute())return TRUE;
 		return FALSE;
 	}
+function updateuser($username, $fullname, $otheremail, $password,  $phone){
+		global $mysqli;
+		$prepared_sql = "UPDATE users SET password=md5(?), fullname=?, otheremail=?, phone=? WHERE username=?";
+		$stmt = $mysqli->prepare($prepared_sql);
+		$stmt->bind_param("ssss",$password,$fullname,$otheremail,$phone, $username);
+		if($stmt->execute())return TRUE;
+		return FALSE;
+	}
 function checklogin_mysql($username, $password) {
     global $mysqli;
     $prepared_sql = "SELECT * FROM users WHERE username= ? AND password = MD5(?)";
