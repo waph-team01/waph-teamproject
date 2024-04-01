@@ -22,4 +22,12 @@ function checklogin_mysql($username, $password) {
     if ($result->num_rows >= 1) return TRUE;
     return FALSE;
     }
+    function changepassword($username, $password) {
+    global $mysqli;
+    $prepared_sql = "UPDATE users SET password = md5(?) WHERE username= ?";
+    $stmt = $mysqli->prepare($prepared_sql);
+    $stmt->bind_param("ss",$password,$username);
+    if ($stmt -> execute()) return TRUE;
+    return FALSE;
+    }
 ?>
