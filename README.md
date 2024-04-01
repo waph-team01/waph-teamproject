@@ -1,42 +1,41 @@
-# README.md Template
-
-*NOTE*: _This is just a tentative template for your team to start working on sprint 0. It is a minimum requirement for your project's final report and can be updated later.
-Your team can revise/add more sections; however, it is highly recommended that you seek approval from the instructor for a pull request._
-
 # WAPH-Web Application Programming and Hacking
 
 ## Instructor: Dr. Phu Phung
 
-# Project Topic/Title
+# Project Title: MiniFacebook
 
 # Team members
 
-1. Member 1, email
-2. Member 2, email
-3. Member 3, email
-4. Member 4, email
+1. Tulasiram Nakkanaboina,   nakkantm@mail.uc.edu
+2. Vihasith Rasala,          rasalavh@mail.uc.edu
+3. Grahika Rampudi,          Rampudga@mail.uc.edu
+4. Sai Sandeep Pasham,       pashamsp@mail.uc.edu
 
 # Project Management Information
 
-Source code repository (private access): <https://github.com/***>
+Source code repository (private access): [Click_here](https://github.com/waph-team01/waph-teamproject)
 
-Project homepage (public): <https://***.github.io>
+Project homepage (public): [Click_here](https://github.com/waph-team01/waph-team01.github.io)
+
+#Team members headshot
+
 
 ## Revision History
 
 | Date       |   Version     |  Description |
 |------------|:-------------:|-------------:|
-| DD/MM/YYYY |  0.0          | Init draft   |
+| 26/03/2024 |  0.0          | Init draft   |
+| 31/03/2024 |  0.1          | Drafting template   |
 
 
 # Overview
-
-Describe the overview of the project with a high-level architecture figure. 
-_Note: You need to update this section according to each sprint_ 
+The mian task of the WAPH procject deals about an inclusive development of a web application called "MiniFacebook". The process od development of the web applications includes a schematic usage of full stack web development learnings and cybersecurity principles which is used for securing the web application by not making it vulnerable for hackers. The website is being developed by our team which constitutes of four members of same class. We used Whatsapp as a channel to communicate and most of our discussion made in physical sessions. We used collobartive notes which can be accessed by all of our teammates where we use that one for the porject discussions, ideas and thoughts for the progress of the project. 
 
 # System Analysis
 
-_(Start from Sprint 0, keep updating)_
+For the initial phase of the project we developed the website using the system config file which is being used and edited for the WAPH-team project file. Hosts file in etc folder is udpated with the public url waph-team01.minifacebook.com adjacent to the I.P Address. After the creation of the website the web application is being accessed by our team members and the below demo screenshots are provided below. 
+
+
 
 ## High-level Requirements
 
