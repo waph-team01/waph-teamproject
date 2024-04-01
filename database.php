@@ -12,4 +12,14 @@ $mysqli=  new mysqli('localhost','waph_team01','waph@uc!2024','waph_team');
 		if($stmt->execute())return TRUE;
 		return FALSE;
 	}
+function checklogin_mysql($username, $password) {
+    global $mysqli;
+    $prepared_sql = "SELECT * FROM users WHERE username= ? AND password = MD5(?)";
+    $stmt = $mysqli->prepare($prepared_sql);
+    $stmt->bind_param("ss",$username,$password);
+    $stmt->execute();
+    $result=$stmt->get_result();
+    if ($result->num_rows >= 1) return TRUE;
+    return FALSE;
+    }
 ?>
