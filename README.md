@@ -17,13 +17,6 @@ Source code repository (private access): [Click_here](https://github.com/waph-te
 
 Project homepage (public): [Click_here](https://github.com/waph-team01/waph-team01.github.io)
 
-# Team members headshot
-
-![Tulasiram](Images/Sprint0/Tulasiram.jpg)
-![Vihasith](Images/Sprint0/Vihasith.jpg)
-![Grahika](Images/Sprint0/Grahika.jpg)
-![Sandeep](Images/Sprint0/sandeep.jpg)
-
 
 ## Revision History
 
@@ -43,10 +36,15 @@ For the initial phase of the project we developed the website using the system c
 # Snippets of the test pages (Demo)
 
 ![admin login](Images/Sprint0/admin.png)
+
 ![Team01_Personal_Page](Images/Sprint0/personalpage.png)
+
 ![test page of nakkantm](Images/Sprint0/Tulasiram1.png)
+
 ![test page of rasalavh](Images/Sprint0/rasalavh1.png)
+
 ![test page of rampudga](Images/Sprint0/rampudga1.jpeg)
+
 ![test page of pashamsp](Images/Sprint0/pashamsp1.png)
 
 
