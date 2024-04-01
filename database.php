@@ -30,4 +30,11 @@ function checklogin_mysql($username, $password) {
     if ($stmt -> execute()) return TRUE;
     return FALSE;
     }
+    function editUser($username, $fullname, $otheremail, $phone) {
+    global $mysqli;
+    $prepared_sql = "UPDATE users SET fullname = ?, otheremail = ?, phone = ? WHERE username = ?";
+    $stmt = $mysqli->prepare($prepared_sql);
+    $stmt->bind_param("ssss", $fullname, $otheremail, $phone, $username);
+    return $stmt->execute();
+}
 ?>
