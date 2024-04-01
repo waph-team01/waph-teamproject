@@ -48,15 +48,6 @@ For the initial phase of the project we developed the website using the system c
 ![test page of pashamsp](Images/Sprint0/pashamsp1.png)
 
 
-# Security analysis
-
-
-*  How did you apply the security programming principles in your project?
-*  What database security principles have you used in your project?
-*  Is your code robust and defensive? How?
-*  How did you defend your code against known attacks such as XSS, SQL Injection, CSRF, Session Hijacking
-*   How do you separate the roles of super users and regular users?
-
 # Software Process Management
 
 _(starting from sprint 0, and updates)_
