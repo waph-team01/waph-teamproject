@@ -16,7 +16,7 @@ function updateuser($username, $fullname, $otheremail, $password,  $phone){
 		global $mysqli;
 		$prepared_sql = "UPDATE users SET password=md5(?), fullname=?, otheremail=?, phone=? WHERE username=?";
 		$stmt = $mysqli->prepare($prepared_sql);
-		$stmt->bind_param("ssss",$password,$fullname,$otheremail,$phone, $username);
+		$stmt->bind_param("sssss",$password,$fullname,$otheremail,$phone, $username);
 		if($stmt->execute())return TRUE;
 		return FALSE;
 	}
