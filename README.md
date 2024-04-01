@@ -47,26 +47,6 @@ For the initial phase of the project we developed the website using the system c
 <img src="Images/Sprint0/pashamsp1.png" alt="test page of pashamsp">
 
 
-## High-level Requirements
-
-List high-level requirements of the project that your team will develop into use cases in later steps
-
-# System Design
-
-_(updates from sprint 0)_
-
-## Use-Case Realization
-
-## Database 
-
-## User Interface
-
-# Implementation
-
-
-For each new sprint cycle, update the implementation of your system (break it down into subsections). Please include some code snippets to illustrate the implementation.
-
-Specify your team's development approach, including programming languages, databases, development, testing, and deployment environments. 
 
 # Security analysis
 
