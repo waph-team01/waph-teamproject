@@ -1,10 +1,10 @@
 <?php 
-$mysqli=  new mysqli('localhost','waph_team01','waph@uc!2024','waph_team');
+$mysqli=  new mysqli('localhost','team01','Pa$$w0rd','waph_team');
 		if($mysqli->connect_errno){ 
 			printf("Database connction failed; %s\n", $mysqli->connect_error);
 			return FALSE;
 		}
-	function addnewuser($username, $password){
+function addnewuser($username, $password){
 		global $mysqli;
 		$prepared_sql = "INSERT INTO users(username,password) VALUES(?,md5(?));";
 		$stmt = $mysqli->prepare($prepared_sql);
