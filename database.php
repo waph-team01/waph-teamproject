@@ -4,11 +4,11 @@ $mysqli=  new mysqli('localhost','team01','Pa$$w0rd','waph_team');
 			printf("Database connction failed; %s\n", $mysqli->connect_error);
 			return FALSE;
 		}
-function addnewuser($username, $password){
+function addnewuser($username, $password, $fullname, $otheremail, $phone){
 		global $mysqli;
-		$prepared_sql = "INSERT INTO users(username,password) VALUES(?,md5(?));";
+		$prepared_sql = "INSERT INTO users(username,password,fullname,otheremail,phone) VALUES(?,?,?,?,md5(?));";
 		$stmt = $mysqli->prepare($prepared_sql);
-		$stmt->bind_param("ss", $username,$password);
+		$stmt->bind_param("ss", $username,$password,$fullname,$otheremail,$phone);
 		if($stmt->execute())return TRUE;
 		return FALSE;
 	}
