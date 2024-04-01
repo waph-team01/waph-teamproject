@@ -35,7 +35,7 @@
 <?php
   echo "Visited time: " . date("Y-m-d h:i:sa");
 ?>
-  <form name="editProfileForm" action="update_profile.php" method="POST" class="form edit-profile" onsubmit="return validateForm();">
+  <form name="editProfileForm" action="updateuser.php" method="POST" class="form edit-profile" onsubmit="return validateForm();">
     Username: <input type="text" class="text_field" name="username" value="<?php echo isset($_GET['username']) ? htmlentities($_GET['username']) : ''; ?>" readonly /> <br>
     Full Name: <input type="text" class="text_field" name="fullName" required><br>
     Email: <input type="email" class="text_field" name="email" required placeholder="username@example.com"><br>
