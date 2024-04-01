@@ -138,7 +138,6 @@ CREATE TABLE comments (
     FOREIGN KEY (post_id) REFERENCES posts(post_id),
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
-
 LOCK tables `users` WRITE;
 INSERT INTO users(username,password) VALUES ('admin',md5('Pa$$w0rd'));
 INSERT INTO users(username,password) VALUES ('test',md5('Pa$$w0rd'));
@@ -158,6 +157,7 @@ UNLOCK tables;
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Team</title>
@@ -218,6 +218,7 @@ UNLOCK tables;
     </style>
 </head>
 <body>
+	
     <div class="team-container">
         <!-- Team member 1 -->
         <div class="team-member">
