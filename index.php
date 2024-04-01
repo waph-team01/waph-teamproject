@@ -32,6 +32,6 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
     die();
 }
 ?>
-<h2> Welcome <?php echo htmlentities($_SESSION['usernaem']); ?> !</h2>
+<h2> Welcome <?php echo htmlentities($_SESSION['username']); ?> !</h2>
 <a href="changepasswordform.php?username=<?php echo urlencode($_SESSION['username']); ?>">Change password</a> | <a href="edituser.php">Edit profile</a> | <a href ="logout.php">logout
 </a>
