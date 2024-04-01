@@ -11,7 +11,7 @@ require "database.php";
 $username = $_SESSION['username'];
 $newPassword = $_POST['newpassword'];
 if (isset($username) && isset($newPassword)) {
-    echo "Debug> changepassword.php got username=$username; got password=$newPassword";
+    echo "Debug> changepassword.php got username = $username; got password = $newPassword <br>";
     if (changepassword($username, $newPassword)) {
         echo "Password has been changed";
     } else {
