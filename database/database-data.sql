@@ -1,18 +1,3 @@
-drop table if exists `users`;
-create table users(
-  user_id INT AUTO_INCREMENT PRIMARY KEY,
-  username varchar(50) ,
-  password varchar(100) NOT NULL,
-  fullname varchar(100),
-  otheremail varchar(100),
-  phone varchar(10));
-drop table if exists `superusers`;
-CREATE TABLE superusers (
-    superuser_id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    username VARCHAR(255) UNIQUE NOT NULL,
-    password VARCHAR(255) NOT NULL
-);
 drop table if exists `messages`;
 CREATE TABLE messages (
     message_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -42,6 +27,22 @@ CREATE TABLE comments (
     FOREIGN KEY (username) REFERENCES users(username)
 );
 
+drop table if exists `users`;
+create table users(
+  user_id INT AUTO_INCREMENT PRIMARY KEY,
+  username varchar(50) ,
+  password varchar(100) NOT NULL,
+  fullname varchar(100),
+  otheremail varchar(100),
+  phone varchar(10));
+
+drop table if exists `superusers`;
+CREATE TABLE superusers (
+    superuser_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
 
 LOCK tables `users` WRITE;
 INSERT INTO users(username,password) VALUES ('admin',md5('Pa$$w0rd'));
