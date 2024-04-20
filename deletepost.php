@@ -1,19 +1,34 @@
-<?php
-require "sessionauthentication.php";
-require "database.php";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Post</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <?php
+      require "sessionauthentication.php";
+      require "database.php";
 
-if (!isset($_GET['postID'])) {
-    echo "Post ID not provided.";
-    die();
-}
+      if (!isset($_GET['postID'])) {
+          echo "<h2>Error</h2><p>Post ID not provided.</p>";
+          die();
+      }
 
-$postID = $_GET['postID'];
+      $postID = $_GET['postID'];
 
-if (deletePost($postID)) {
-    echo "Post deleted successfully.";
-} else {
-    echo "Failed to delete post.";
-}
+      if (deletePost($postID)) {
+          echo "<h2>Success</h2><p>Post deleted successfully.</p>";
+      } else {
+          echo "<h2>Error</h2><p>Failed to delete post.</p>";
+      }
 
-header("Refresh:3; url=viewposts.php");
-?>
+      header("Refresh:2; url=viewposts.php");
+      ?>
+    </div>
+  </div>
+</body>
+</html>
