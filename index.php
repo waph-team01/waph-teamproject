@@ -49,11 +49,11 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
         <form id="changepasswordform" action="changepasswordform.php" method="POST">
         <input type="hidden" name="username" value="<?php echo urlencode($_SESSION['username']); ?>">
         <button type="submit">Change password</button>
-        </form>  
-        <form id="edituserform" action="edituser.php" method="GET">
+        </form>
+          <form id="viewprofileform" action="viewprofile.php" method="POST">
         <input type="hidden" name="username" value="<?php echo urlencode($_SESSION['username']); ?>">
-        <button type="submit">Edit profile</button>
-        </form>  
+        <button type="submit">View/Edit Profile</button>
+        </form> 
         <form id="addpostform" action="addpost.php" method="POST">
         <button type="submit">Add Post</button>
         </form>
