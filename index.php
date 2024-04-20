@@ -32,9 +32,38 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
     die();
 }
 ?>
-<h2>Welcome <?php echo htmlentities($_SESSION['username']); ?>!</h2>
-<a href="changepasswordform.php?username=<?php echo urlencode($_SESSION['username']); ?>">Change password</a> | 
-<a href="edituser.php?username=<?php echo urlencode($_SESSION['username']); ?>">Edit profile</a> | 
-<a href="addpost.php">Add Post</a> | <!-- New link to add post -->
-<a href="viewposts.php">View Posts</a> | 
-<a href="logout.php">Logout</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+      <?php
+      echo "<h2>Welcome " . htmlentities($_SESSION['username']) . "!</h2>";
+      ?>
+      <div class="links">
+        <form id="changepasswordform" action="changepasswordform.php" method="POST">
+        <input type="hidden" name="username" value="<?php echo urlencode($_SESSION['username']); ?>">
+        <button type="submit">Change password</button>
+        </form>  
+        <form id="edituserform" action="edituser.php" method="GET">
+        <input type="hidden" name="username" value="<?php echo urlencode($_SESSION['username']); ?>">
+        <button type="submit">Edit profile</button>
+        </form>  
+        <form id="addpostform" action="addpost.php" method="POST">
+        <button type="submit">Add Post</button>
+        </form>
+        <form id="viewpostsform" action="viewposts.php" method="POST">
+        <button type="submit">View Posts</button>
+        </form>
+        <form id="logout" action="logout.php" method="POST">
+        <button type="submit">Logout</button>
+        </form> 
+    </div>
+  </div>
+</body>
+</html>
