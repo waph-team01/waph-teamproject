@@ -13,4 +13,7 @@ if (isset($_POST['commentContent']) && isset($_POST['postID'])) {
         echo "Failed to add comment.";
     }
 } else {
-    echo "No
+    echo "No comment content was provided";
+}
+
+header("Refresh:3; url=viewposts.php");
