@@ -1,4 +1,4 @@
-drop table if exists `messages`;
+ drop table if exists `messages`;
 
 drop table if exists `comments`;
 
@@ -6,13 +6,14 @@ drop table if exists `comments`;
 drop table if exists `posts`;
 
 drop table if exists `users`;
-create table users(
+CREATE TABLE users (
   user_id INT AUTO_INCREMENT PRIMARY KEY,
-  username varchar(50) ,
-  password varchar(100) NOT NULL,
-  fullname varchar(100),
-  otheremail varchar(100),
-  phone varchar(10));
+  username VARCHAR(50) UNIQUE,
+  password VARCHAR(100) NOT NULL,
+  fullname VARCHAR(100),
+  otheremail VARCHAR(100),
+  phone VARCHAR(10)
+);
 
 CREATE TABLE messages (
     message_id INT AUTO_INCREMENT PRIMARY KEY,
