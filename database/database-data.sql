@@ -1,11 +1,4 @@
 drop table if exists `messages`;
-CREATE TABLE messages (
-    message_id INT AUTO_INCREMENT PRIMARY KEY,
-    message TEXT NOT NULL,
-    user_id INT,
-    time_stamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
-);
 
 drop table if exists `comments`;
 
@@ -20,6 +13,14 @@ create table users(
   fullname varchar(100),
   otheremail varchar(100),
   phone varchar(10));
+
+CREATE TABLE messages (
+    message_id INT AUTO_INCREMENT PRIMARY KEY,
+    message TEXT NOT NULL,
+    user_id INT,
+    time_stamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
 
 CREATE TABLE posts (
     postID INT AUTO_INCREMENT PRIMARY KEY,
