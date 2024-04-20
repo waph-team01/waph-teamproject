@@ -21,26 +21,27 @@ CREATE TABLE messages (
     time_stamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
-drop table if exists `posts`;
+
+drop table if exists `post`;
 CREATE TABLE posts (
-    post_id INT AUTO_INCREMENT PRIMARY KEY,
-    post_type VARCHAR(50),
-    title varchar(100) NOT NULL,
-    user_id INT,
-  posttime varchar(100),
-    time_stamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
+    postID INT AUTO_INCREMENT PRIMARY KEY,
+    postContent TEXT,
+    postDate DATETIME,
+    username VARCHAR(255),
+    FOREIGN KEY (username) REFERENCES users(username)
 );
+
 drop table if exists `comments`;
 CREATE TABLE comments (
-    comment_id INT AUTO_INCREMENT PRIMARY KEY,
-    post_id INT,
-    user_id INT,
-    comment TEXT NOT NULL,
-    time_stamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (post_id) REFERENCES posts(post_id),
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
+    commentID INT AUTO_INCREMENT PRIMARY KEY,
+    commentContent TEXT,
+    commentDate DATETIME,
+    postID INT,
+    username VARCHAR(255),
+    FOREIGN KEY (postID) REFERENCES posts(postID),
+    FOREIGN KEY (username) REFERENCES users(username)
 );
+
 
 LOCK tables `users` WRITE;
 INSERT INTO users(username,password) VALUES ('admin',md5('Pa$$w0rd'));
