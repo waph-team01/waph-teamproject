@@ -11,6 +11,16 @@ drop table if exists `comments`;
 
 
 drop table if exists `posts`;
+
+drop table if exists `users`;
+create table users(
+  user_id INT AUTO_INCREMENT PRIMARY KEY,
+  username varchar(50) ,
+  password varchar(100) NOT NULL,
+  fullname varchar(100),
+  otheremail varchar(100),
+  phone varchar(10));
+
 CREATE TABLE posts (
     postID INT AUTO_INCREMENT PRIMARY KEY,
     postContent TEXT,
@@ -29,15 +39,6 @@ CREATE TABLE comments (
     FOREIGN KEY (username) REFERENCES users(username)
 );
 
-
-drop table if exists `users`;
-create table users(
-  user_id INT AUTO_INCREMENT PRIMARY KEY,
-  username varchar(50) ,
-  password varchar(100) NOT NULL,
-  fullname varchar(100),
-  otheremail varchar(100),
-  phone varchar(10));
 
 drop table if exists `superusers`;
 CREATE TABLE superusers (
