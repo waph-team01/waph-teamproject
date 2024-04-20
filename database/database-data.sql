@@ -7,15 +7,6 @@ CREATE TABLE messages (
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
-drop table if exists `posts`;
-CREATE TABLE posts (
-    postID INT AUTO_INCREMENT PRIMARY KEY,
-    postContent TEXT,
-    postDate DATETIME,
-    username VARCHAR(255),
-    FOREIGN KEY (username) REFERENCES users(username)
-);
-
 drop table if exists `comments`;
 CREATE TABLE comments (
     commentID INT AUTO_INCREMENT PRIMARY KEY,
@@ -26,6 +17,16 @@ CREATE TABLE comments (
     FOREIGN KEY (postID) REFERENCES posts(postID),
     FOREIGN KEY (username) REFERENCES users(username)
 );
+
+drop table if exists `posts`;
+CREATE TABLE posts (
+    postID INT AUTO_INCREMENT PRIMARY KEY,
+    postContent TEXT,
+    postDate DATETIME,
+    username VARCHAR(255),
+    FOREIGN KEY (username) REFERENCES users(username)
+);
+
 
 drop table if exists `users`;
 create table users(
