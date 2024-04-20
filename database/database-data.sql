@@ -22,7 +22,7 @@ CREATE TABLE messages (
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
-drop table if exists `post`;
+drop table if exists `posts`;
 CREATE TABLE posts (
     postID INT AUTO_INCREMENT PRIMARY KEY,
     postContent TEXT,
