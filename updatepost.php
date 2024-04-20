@@ -16,5 +16,5 @@ if (updatePost($postID, $postContent)) {
     echo "Failed to update post.";
 }
 
-header("Refresh:3; url=viewposts.php");
+header("Refresh:2; url=viewposts.php");
 ?>
