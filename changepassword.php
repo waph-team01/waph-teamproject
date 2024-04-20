@@ -2,11 +2,11 @@
 require "sessionauthentication.php";
 require "database.php";
 
-// $token = $_POST['csrf-token'];
-// if (!isset($token) || $token !== $_SESSION['csrf-token']) {
-//     echo "CSRF Attack is detected";
-//     die();
-// }
+$token = $_POST['nocsrftoken'];
+if (!isset($token) || $token !== $_SESSION['nocsrftoken']) {
+    echo "CSRF Attack is detected";
+    die();
+}
 
 $username = $_SESSION['username'];
 $newPassword = $_POST['newpassword'];
