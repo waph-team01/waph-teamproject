@@ -75,7 +75,7 @@
           echo "No comment content was provided";
       }
 
-      header("Refresh:2; url=viewposts.php");
+      header("Refresh:2; url=index.php");
       ?>
     </div>
   </div>
