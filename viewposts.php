@@ -6,11 +6,14 @@
   <title>Main Page</title>
   <link rel="stylesheet" href="styles.css">
   <style>
+    .post-container {
+      margin-bottom: 20px;
+    }
+
     .post {
       background-color: #f9f9f9;
       border-radius: 8px;
       padding: 20px;
-      margin-bottom: 20px;
     }
 
     .post h3 {
@@ -71,8 +74,7 @@
                              ORDER BY p.postDate DESC");
 
     if ($posts->num_rows > 0) {
-        $row = $posts->fetch_assoc(); // Fetch the first post
-        do {
+        while ($row = $posts->fetch_assoc()) {
             echo "<div class='post-container'>";
             echo "<div class='post'>";
             echo "<h3>" . htmlspecialchars($row['username']) . " on " . $row['postDate'] . "</h3>";
@@ -108,7 +110,7 @@
             echo "</form>";
             echo "</div>";
             echo "</div>";
-        } while ($row = $posts->fetch_assoc()); 
+        }
     } else {
         echo "<p>No posts found.</p>";
     }
