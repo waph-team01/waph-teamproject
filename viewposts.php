@@ -6,20 +6,20 @@
   <title>Main Page</title>
   <link rel="stylesheet" href="styles.css">
   <style>
+    .post-container {
+      margin-bottom: 20px;
+    }
+
     .post {
       background-color: #f9f9f9;
       border-radius: 8px;
       padding: 20px;
+      width: calc(100% - 40px); 
       margin-bottom: 20px;
-      width: calc(100% - 40px);
     }
 
-    .post h3 {
-      margin-top: 0;
-    }
-
-    .post p {
-      margin-bottom: 10px;
+    .user-post {
+      background-color: #e6f7ff;
     }
 
     .comment {
@@ -27,10 +27,6 @@
       border-radius: 4px;
       padding: 10px;
       margin-top: 10px;
-    }
-
-    .comment p {
-      margin-bottom: 5px;
     }
 
     .add-comment-form {
@@ -58,10 +54,6 @@
     .add-comment-form input[type="submit"]:hover {
       background-color: #0056b3;
     }
-
-    .user-post {
-      background-color: #e6f7ff;
-    }
   </style>
 </head>
 <body>
@@ -77,7 +69,8 @@
 
     if ($posts->num_rows > 0) {
         while ($row = $posts->fetch_assoc()) {
-            echo "<div class='post" . ($row['username'] == $_SESSION['username'] ? " user-post" : "") . "'>";
+            echo "<div class='post-container'>";
+            echo "<div class='post'>";
             echo "<h3>" . htmlspecialchars($row['username']) . " on " . $row['postDate'] . "</h3>";
             echo "<p>" . htmlspecialchars($row['postContent']) . "</p>";
 
@@ -110,6 +103,7 @@
             echo "<input type='submit' value='Comment'>";
             echo "</form>";
             echo "</div>";
+            echo "</div>"; 
         }
     } else {
         echo "<p>No posts found.</p>";
