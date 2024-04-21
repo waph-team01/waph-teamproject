@@ -2,7 +2,7 @@
 session_set_cookie_params(15*60, "/", "waph-team01.mini.facebook.com", TRUE, TRUE);
 session_start();
 
-require_once "database.php"; // Include database.php only once
+require_once "database.php"; 
 
 if (isset($_POST["username"]) && isset($_POST["password"])) {
     $username = $_POST["username"]; 
@@ -152,6 +152,14 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
     button[type="submit"]:hover {
       background-color: #45a049;
     }
+    
+    .edit-delete-container {
+      display: inline-block;
+    }
+    
+    .edit-post-form, .delete-post-form {
+      display: inline;
+    }
   </style>
 </head>
 <body>
@@ -190,7 +198,8 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
             echo "<div class='post'>";
             echo "<h3>" . htmlspecialchars($row['username']) . " posted on " . $row['postDate'] . "</h3>";
             echo "<p>" . htmlspecialchars($row['postContent']) . "</p>";
-
+            
+            echo "<div class='edit-delete-container'>";
             if ($row['username'] == $_SESSION['username']) {
                 echo "<form action='editpost.php' method='POST' class='edit-post-form'>";
                 echo "<input type='hidden' name='postID' value='" . $row['postID'] . "'>";
@@ -201,6 +210,7 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
                 echo "<button type='submit'>Delete</button>";
                 echo "</form>";
             }
+            echo "</div>";
 
             echo "<h4>Comments:</h4>";
 
