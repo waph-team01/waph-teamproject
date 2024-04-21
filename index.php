@@ -1,3 +1,38 @@
+<?php
+session_start();
+session_set_cookie_params(15*60, "/", "waph-team01.mini.facebook.com", TRUE, TRUE);
+require "database.php"; 
+
+if (isset($_POST["username"]) && isset($_POST["password"])) {
+    $username = $_POST["username"]; 
+    $password = $_POST["password"];
+
+    if (checklogin_mysql($username, $password)) {
+        $_SESSION["authenticated"] = TRUE;
+        $_SESSION["username"] = $username; 
+        $_SESSION["browser"] = $_SERVER["HTTP_USER_AGENT"];
+    } else {
+        session_destroy();
+        echo "<script>alert('Invalid Username or password please recheck');window.location='form.php';</script>";
+        die();
+    }
+}
+
+if (!isset($_SESSION["authenticated"]) || $_SESSION["authenticated"] != TRUE) { 
+    session_destroy();
+    echo "<script>alert('You have not logged in. Please login first');</script>";
+    header("Refresh:0; url=form.php");
+    die();
+}
+
+if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
+    session_destroy();
+    echo "<script>alert('Session hijack detected')</script>"; 
+    header("Refresh:0; url=form.php");
+    die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,63 +58,6 @@
       margin-top: 0;
     }
 
-    .post-container {
-      margin-bottom: 20px;
-    }
-
-    .post {
-      background-color: #f9f9f9;
-      border-radius: 8px;
-      padding: 20px;
-    }
-
-    .post h3 {
-      margin-top: 0;
-    }
-
-    .post p {
-      margin-bottom: 10px;
-    }
-
-    .comment {
-      background-color: #f0f0f0;
-      border-radius: 4px;
-      padding: 10px;
-      margin-top: 10px;
-    }
-
-    .comment p {
-      margin-bottom: 5px;
-    }
-
-    .add-comment-form {
-      margin-top: 10px;
-    }
-
-    .add-comment-form textarea {
-      width: calc(100% - 20px);
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      resize: vertical;
-      margin-bottom: 10px;
-    }
-
-    .add-comment-form input[type="submit"] {
-      background-color: #4CAF50; /* Dark green button color */
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .add-comment-form input[type="submit"]:hover {
-      background-color: #45a049;
-    }
-
-    /* Menu options */
     .links {
       display: flex;
       justify-content: space-between;
@@ -132,7 +110,6 @@
     <h1>Posts</h1> 
 
     <?php
-    require "sessionauthentication.php";
     require "database.php";
 
     $posts = $mysqli->query("SELECT p.postID, p.postContent, p.postDate, u.username
