@@ -1,6 +1,7 @@
 <?php
-session_start();
 session_set_cookie_params(15*60, "/", "waph-team01.mini.facebook.com", TRUE, TRUE);
+session_start();
+
 require "database.php"; 
 
 if (isset($_POST["username"]) && isset($_POST["password"])) {
