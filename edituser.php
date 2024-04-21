@@ -13,7 +13,7 @@
       <form name="editProfileForm" action="updateuser.php" method="POST" class="form edit-profile" onsubmit="return validateForm();">
         <div class="input-group">
           <label for="username">Username:</label>
-          <input type="text" class="text_field" name="username" value="<?php echo isset($_GET['username']) ? htmlentities($_GET['username']) : ''; ?>" readonly />
+          <input type="text" class="text_field" name="username" value="<?php echo isset($_SESSION['username']) ? htmlentities($_SESSION['username']) : ''; ?>" readonly />
         </div>
         <div class="input-group">
           <label for="fullName">Full Name:</label>
