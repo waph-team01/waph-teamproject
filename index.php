@@ -1,3 +1,38 @@
+<?php
+session_set_cookie_params(15*60, "/", "waph-team01.mini.facebook.com", TRUE, TRUE);
+session_start();
+
+require_once "database.php"; 
+
+if (isset($_POST["username"]) && isset($_POST["password"])) {
+    $username = $_POST["username"]; 
+    $password = $_POST["password"];
+
+    if (checklogin_mysql($username, $password)) {
+        $_SESSION["authenticated"] = TRUE;
+        $_SESSION["username"] = $username; 
+        $_SESSION["browser"] = $_SERVER["HTTP_USER_AGENT"];
+    } else {
+        session_destroy();
+        echo "<script>alert('Invalid Username or password please recheck');window.location='form.php';</script>";
+        die();
+    }
+}
+
+if (!isset($_SESSION["authenticated"]) || $_SESSION["authenticated"] != TRUE) { 
+    session_destroy();
+    echo "<script>alert('You have not logged in. Please login first');</script>";
+    header("Refresh:0; url=form.php");
+    die();
+}
+
+if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
+    session_destroy();
+    echo "<script>alert('Session hijack detected')</script>"; 
+    header("Refresh:0; url=form.php");
+    die();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,10 +93,12 @@
       background-color: #f9f9f9;
       border-radius: 8px;
       padding: 20px;
+      margin-bottom: 15px; /* Add some space between posts */
     }
 
     .post h3 {
       margin-top: 0;
+      margin-bottom: 10px; /* Add some space below the post title */
     }
 
     .post p {
@@ -104,29 +141,6 @@
 
     .add-comment-form input[type="submit"]:hover {
       background-color: #45a049;
-    }
-
-    /* Adjust home button color */
-    button[type="submit"] {
-      background-color: #4CAF50; /* Dark green button color */
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    button[type="submit"]:hover {
-      background-color: #45a049;
-    }
-    
-    .edit-delete-container {
-      display: inline-block;
-    }
-    
-    .edit-post-form, .delete-post-form {
-      display: inline;
     }
   </style>
 </head>
