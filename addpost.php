@@ -16,6 +16,7 @@
           <textarea name="postContent" rows="4" cols="50" class="text_field" required></textarea>
         </div>
         <button class="button" type="submit">Post</button>
+        <button class="button" onclick="window.location.href='index.php';">Home</button>
       </form>
     </div>
   </div>
