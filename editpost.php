@@ -13,12 +13,12 @@
       require "sessionauthentication.php";
       require "database.php";
 
-      if (!isset($_GET['postID'])) {
+      if (!isset($_POST['postID'])) {
           echo "<h2>Error</h2><p>Post ID not provided.</p>";
           die();
       }
 
-      $postID = $_GET['postID'];
+      $postID = $_POST['postID'];
 
       $post = $mysqli->query("SELECT postContent FROM posts WHERE postID = $postID")->fetch_assoc();
 
