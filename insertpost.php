@@ -25,6 +25,7 @@
       } else {
           echo "<h2>Error</h2><p>No post content provided.</p>";
       }
+      header("Refresh:2; url=viewposts.php");
       ?>
     </div>
   </div>
