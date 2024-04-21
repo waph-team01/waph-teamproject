@@ -168,6 +168,9 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
       echo "<div class='welcome-text'>Welcome " . htmlentities($_SESSION['username']) . "!</div>";
       ?>
       <div class="links">
+          <form id="addpostform" action="addpost.php" method="POST">
+          <button type="submit">Add Post</button>
+            </form>
         <form id="changepasswordform" action="changepasswordform.php" method="POST">
           <input type="hidden" name="username" value="<?php echo urlencode($_SESSION['username']); ?>">
           <button type="submit">Change Password</button>
@@ -176,9 +179,9 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
           <input type="hidden" name="username" value="<?php echo urlencode($_SESSION['username']); ?>">
           <button type="submit">View/Edit Profile</button>
         </form> 
-        <form id="addpostform" action="addpost.php" method="POST">
-          <button type="submit">Add Post</button>
-        </form>
+        <form id="usermanagementform" action="usermanagement.php" method="POST">
+        <button type="submit">User Management</button>
+        </form> 
         <form id="logout" action="logout.php" method="POST">
           <button type="submit">Logout</button>
         </form> 
