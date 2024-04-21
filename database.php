@@ -96,4 +96,13 @@ function deletePost($postID) {
     $stmt->bind_param("i", $postID);
     return $stmt->execute();
 }
+
+function changeUserStatus($username, $status) {
+    global $mysqli;
+    $prepared_sql = "UPDATE users SET account_enabled = ? WHERE username = ?";
+    $stmt = $mysqli->prepare($prepared_sql);
+    $stmt->bind_param("is", $status, $username);
+    return $stmt->execute();
+}
+
 ?>
