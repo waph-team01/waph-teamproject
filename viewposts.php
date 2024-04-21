@@ -18,11 +18,11 @@
       margin-bottom: 20px;
     }
 
-    .user-post {
-      background-color: #e6f7ff;
+    .post h3 {
+      margin-top: 0;
     }
 
-    .post-content {
+    .post p {
       margin-bottom: 10px;
     }
 
@@ -31,6 +31,10 @@
       border-radius: 4px;
       padding: 10px;
       margin-top: 10px;
+    }
+
+    .comment p {
+      margin-bottom: 5px;
     }
 
     .add-comment-form {
@@ -75,10 +79,8 @@
         while ($row = $posts->fetch_assoc()) {
             echo "<div class='post-container'>";
             echo "<div class='post'>";
-            echo "<div class='post-content'>";
             echo "<h3>" . htmlspecialchars($row['username']) . " on " . $row['postDate'] . "</h3>";
             echo "<p>" . htmlspecialchars($row['postContent']) . "</p>";
-            echo "</div>"; 
 
             if ($row['username'] == $_SESSION['username']) {
                 echo "<a href='editpost.php?postID=" . $row['postID'] . "'>Edit</a> | ";
@@ -108,8 +110,8 @@
             echo "<input type='hidden' name='postID' value='" . $row['postID'] . "'>";
             echo "<input type='submit' value='Comment'>";
             echo "</form>";
-            echo "</div>"; // Close .post
-            echo "</div>"; // Close .post-container
+            echo "</div>";
+            echo "</div>";
         }
     } else {
         echo "<p>No posts found.</p>";
