@@ -41,7 +41,7 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+      background-color: #f4f4f4;
     }
 
     .container {
