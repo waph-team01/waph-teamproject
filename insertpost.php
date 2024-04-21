@@ -1,18 +1,32 @@
-<?php
-require "sessionauthentication.php";
-require "database.php";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add a New Post</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <?php
+      require "sessionauthentication.php";
+      require "database.php";
 
-if (isset($_POST['postContent'])) {
-    $postContent = htmlspecialchars($_POST['postContent']);
-    $username = $_SESSION['username'];
+      if (isset($_POST['postContent'])) {
+          $postContent = htmlspecialchars($_POST['postContent']);
+          $username = $_SESSION['username'];
 
-    if (insertPost($postContent, $username)) {
-        echo "Post added successfully.";
-    } else {
-        echo "Failed to add post.";
-    }
-} else {
-    echo "No post content provided.";
-}
-
-header("Refresh:3; url=viewposts.php");
+          if (insertPost($postContent, $username)) {
+              echo "<h2>Success</h2><p>Post added successfully.</p>";
+          } else {
+              echo "<h2>Error</h2><p>Failed to add post.</p>";
+          }
+      } else {
+          echo "<h2>Error</h2><p>No post content provided.</p>";
+      }
+      ?>
+    </div>
+  </div>
+</body>
+</html>
