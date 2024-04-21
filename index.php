@@ -83,6 +83,62 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
     .links button:hover {
       background-color: #45a049;
     }
+
+    .post-container {
+      margin-bottom: 20px;
+    }
+
+    .post {
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .post h3 {
+      margin-top: 0;
+    }
+
+    .post p {
+      margin-bottom: 10px;
+    }
+
+    .comment {
+      background-color: #f0f0f0;
+      border-radius: 4px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    .comment p {
+      margin-bottom: 5px;
+    }
+
+    .add-comment-form {
+      margin-top: 10px;
+    }
+
+    .add-comment-form textarea {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+      margin-bottom: 10px;
+    }
+
+    .add-comment-form input[type="submit"] {
+      background-color: #4CAF50; /* Dark green button color */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .add-comment-form input[type="submit"]:hover {
+      background-color: #45a049;
+    }
   </style>
 </head>
 <body>
