@@ -39,7 +39,7 @@ function fetchUserProfile($username)
 
 function checklogin_mysql($username, $password) {
     global $mysqli;
-    $prepared_sql = "SELECT * FROM users WHERE username= ? AND password = MD5(?)";
+    $prepared_sql = "SELECT * FROM users WHERE username = ? AND password = MD5(?) AND account_enabled = 1";
     $stmt = $mysqli->prepare($prepared_sql);
     $stmt->bind_param("ss", $username, $password);
     $stmt->execute();
