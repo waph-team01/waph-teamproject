@@ -13,7 +13,6 @@
       <div id="digit-clock"></div>
 
       <?php
-      session_start();
       require "database.php";
 
       if (isset($_SESSION['username'])) {
