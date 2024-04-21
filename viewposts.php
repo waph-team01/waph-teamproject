@@ -80,6 +80,21 @@
     .add-comment-form input[type="submit"]:hover {
       background-color: #45a049;
     }
+
+    /* Adjust home button color */
+    button[type="submit"] {
+      background-color: #4CAF50; /* Dark green button color */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #45a049;
+    }
   </style>
 </head>
 <body>
