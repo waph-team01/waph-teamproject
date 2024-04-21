@@ -161,7 +161,7 @@ if (isset($_POST['action']) && isset($_POST['username'])) {
       echo "<div class='welcome-text'>Welcome " . htmlentities($_SESSION['username']) . "!</div>";
       ?>
       <div class="links">
-        <form id="home" action="home.php" method="POST">
+        <form id="home" action="index.php" method="POST">
           <button type="submit">Home</button>
         </form> 
         <form id="changepasswordform" action="changepasswordform.php" method="POST">
