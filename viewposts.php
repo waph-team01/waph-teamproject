@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     .post-container {
+      width: 100%;
       margin-bottom: 20px;
     }
 
