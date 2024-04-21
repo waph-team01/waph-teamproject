@@ -9,7 +9,6 @@
     .post-container {
       width: 100%;
       margin-bottom: 20px;
-      clear: both; /* Add this line to clear floats */
     }
 
     .post {
@@ -17,12 +16,52 @@
       border-radius: 8px;
       padding: 20px;
       margin-bottom: 20px;
-      float: left; /* Add this line to float the posts */
-      width: 100%; /* Add this line to make the posts full width */
-      box-sizing: border-box; /* Add this line to include padding in the width */
     }
 
-    /* Rest of the CSS remains the same */
+    .post h3 {
+      margin-top: 0;
+    }
+
+    .post p {
+      margin-bottom: 10px;
+    }
+
+    .comment {
+      background-color: #f0f0f0;
+      border-radius: 4px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    .comment p {
+      margin-bottom: 5px;
+    }
+
+    .add-comment-form {
+      margin-top: 10px;
+    }
+
+    .add-comment-form textarea {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+      margin-bottom: 10px;
+    }
+
+    .add-comment-form input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .add-comment-form input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
   </style>
 </head>
 <body>
@@ -71,8 +110,8 @@
             echo "<input type='hidden' name='postID' value='" . $row['postID'] . "'>";
             echo "<input type='submit' value='Comment'>";
             echo "</form>";
-            echo "</div>";
-            echo "</div>";
+            echo "</div>"; // Close the post div
+            echo "</div>"; // Close the post-container div
         }
     } else {
         echo "<p>No posts found.</p>";
