@@ -140,7 +140,7 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
 
     /* Adjust home button color */
     button[type="submit"] {
-      background-color: #007bff;
+      background-color: #4CAF50; /* Green */
       color: white;
       border: none;
       padding: 10px 20px;
@@ -150,7 +150,7 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
     }
 
     button[type="submit"]:hover {
-      background-color: #0056b3;
+      background-color: #45a049; /* Darker green on hover */
     }
     
     .edit-delete-container {
@@ -159,6 +159,15 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
     
     .edit-post-form, .delete-post-form {
       display: inline;
+    }
+
+    .edit-delete-comment button {
+      background-color: #007bff; /* Blue */
+      transition: background-color 0.3s;
+    }
+
+    .edit-delete-comment button:hover {
+      background-color: #0056b3; /* Darker blue on hover */
     }
   </style>
 </head>
@@ -201,11 +210,11 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
             
             echo "<div class='edit-delete-container'>";
             if ($row['username'] == $_SESSION['username']) {
-                echo "<form action='editpost.php' method='POST' class='edit-post-form'>";
+                echo "<form action='editpost.php' method='POST' class='edit-post-form edit-delete-comment'>";
                 echo "<input type='hidden' name='postID' value='" . $row['postID'] . "'>";
                 echo "<button type='submit'>Edit</button>";
                 echo "</form>";
-                echo "<form action='deletepost.php' method='POST' class='delete-post-form'>";
+                echo "<form action='deletepost.php' method='POST' class='delete-post-form edit-delete-comment'>";
                 echo "<input type='hidden' name='postID' value='" . $row['postID'] . "'>";
                 echo "<button type='submit'>Delete</button>";
                 echo "</form>";
