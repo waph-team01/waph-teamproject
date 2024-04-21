@@ -11,6 +11,7 @@
       border-radius: 8px;
       padding: 20px;
       margin-bottom: 20px;
+      width: calc(100% - 40px);
     }
 
     .post h3 {
