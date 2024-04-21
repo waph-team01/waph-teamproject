@@ -63,6 +63,10 @@
 </head>
 <body>
   <div class="container">
+    <h1>Posts</h1> 
+    <form action="index.php" method="GET">
+      <button type="submit">Home</button>
+    </form>
     <?php
     require "sessionauthentication.php";
     require "database.php";
