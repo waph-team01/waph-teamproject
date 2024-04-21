@@ -23,6 +23,20 @@ function updateuser($username, $fullname, $otheremail, $password, $phone) {
     return false;
 }
 
+function fetchUserProfile($username)
+{
+    global $mysqli;
+    $prepared_sql = "SELECT * FROM users WHERE username = ?";
+    $stmt = $mysqli->prepare($prepared_sql);
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if ($result->num_rows === 1) {
+        return $result->fetch_assoc();
+    }
+    return null;
+}
+
 function checklogin_mysql($username, $password) {
     global $mysqli;
     $prepared_sql = "SELECT * FROM users WHERE username= ? AND password = MD5(?)";
