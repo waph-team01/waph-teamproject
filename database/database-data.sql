@@ -42,13 +42,9 @@ CREATE TABLE comments (
 );
 
 
-drop table if exists `superusers`;
-CREATE TABLE superusers (
-    superuser_id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    username VARCHAR(255) UNIQUE NOT NULL,
-    password VARCHAR(255) NOT NULL
-);
+ALTER TABLE users
+ADD COLUMN superuser BOOLEAN DEFAULT 0,
+ADD COLUMN account_enabled BOOLEAN DEFAULT 1;
 
 LOCK tables `users` WRITE;
 INSERT INTO users(username,password) VALUES ('admin',md5('Pa$$w0rd'));
