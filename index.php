@@ -71,7 +71,7 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
-      background-color: #4CAF50;
+      background-color: #007bff;
       color: white;
       border: none;
       border-radius: 5px;
@@ -79,26 +79,21 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
     }
 
     .links button:hover {
-      background-color: #45a049;
+      background-color: #0056b3;
     }
 
     .post-container {
       margin-bottom: 20px;
-      max-width: 600px; /* Set maximum width for the post container */
-      margin-left: auto;
-      margin-right: auto;
     }
 
     .post {
       background-color: #f9f9f9;
       border-radius: 8px;
       padding: 20px;
-      margin-bottom: 15px; /* Add some space between posts */
     }
 
     .post h3 {
       margin-top: 0;
-      margin-bottom: 10px; /* Add some space below the post title */
     }
 
     .post p {
@@ -130,7 +125,7 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
     }
 
     .add-comment-form input[type="submit"] {
-      background-color: #4CAF50; /* Dark green button color */
+      background-color: #007bff;
       color: white;
       border: none;
       padding: 10px 20px;
@@ -140,7 +135,30 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
     }
 
     .add-comment-form input[type="submit"]:hover {
-      background-color: #45a049;
+      background-color: #0056b3;
+    }
+
+    /* Adjust home button color */
+    button[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+    
+    .edit-delete-container {
+      display: inline-block;
+    }
+    
+    .edit-post-form, .delete-post-form {
+      display: inline;
     }
   </style>
 </head>
