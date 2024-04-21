@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f0f0f0; 
+      background-color: #f4f4f4;
       margin: 0;
       padding: 0;
     }
@@ -69,7 +69,7 @@
 <body>
   <div class="container">
     <?php
-    session_start();
+    require sessionauthentication.php;
     $rand = bin2hex(openssl_random_pseudo_bytes(16));
     $_SESSION["nocsrftoken"] = $rand;
     ?>
