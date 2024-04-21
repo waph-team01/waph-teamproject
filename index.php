@@ -173,7 +173,7 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
                              JOIN users u ON p.username = u.username
                              ORDER BY p.postDate DESC");
 
-    if ($posts->num_rows > 0) {
+    if ($posts && $posts->num_rows > 0) {
         while ($row = $posts->fetch_assoc()) {
             echo "<div class='post-container'>";
             echo "<div class='post'>";
@@ -193,7 +193,7 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
                                         WHERE c.postID = " . $row['postID'] . "
                                         ORDER BY c.commentDate ASC");
 
-            if ($comments->num_rows > 0) {
+            if ($comments && $comments->num_rows > 0) {
                 while ($commentRow = $comments->fetch_assoc()) {
                     echo "<div class='comment'>";
                     echo "<p>" . htmlspecialchars($commentRow['username']) . " on " . $commentRow['commentDate'] . "</p>";
