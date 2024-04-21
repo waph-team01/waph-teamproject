@@ -17,22 +17,22 @@
         </div>
         <div class="input-group">
           <label for="fullName">Full Name:</label>
-          <input type="text" class="text_field" name="fullName" required>
+          <input type="text" class="text_field" name="fullName" required oninput="validateFullName()">
           <div class="error-message" id="fullName-error"></div>
         </div>
         <div class="input-group">
           <label for="email">Email:</label>
-          <input type="email" class="text_field" name="email" required placeholder="username@example.com">
+          <input type="email" class="text_field" name="email" required placeholder="username@example.com" oninput="validateEmail()">
           <div class="error-message" id="email-error"></div>
         </div>
         <div class="input-group">
           <label for="password">Password:</label>
-          <input type="password" class="text_field" name="password" required>
+          <input type="password" class="text_field" name="password" required oninput="validatePassword()">
           <div class="error-message" id="password-error"></div>
         </div>
         <div class="input-group">
           <label for="phoneNumber">Phone Number:</label>
-          <input type="tel" class="text_field" name="phoneNumber" required pattern="[0-9]{10}" title="Please enter a 10-digit phone number">
+          <input type="tel" class="text_field" name="phoneNumber" required pattern="[0-9]{10}" title="Please enter a 10-digit phone number" oninput="validatePhoneNumber()">
           <div class="error-message" id="phoneNumber-error"></div>
         </div>
         <button class="button" type="button" onclick="window.location.href='index.php';">Home</button>
@@ -42,55 +42,70 @@
   </div>
 
   <script>
-    function validateForm() {
+    function validateFullName() {
       var fullName = document.forms["editProfileForm"]["fullName"].value;
-      var email = document.forms["editProfileForm"]["email"].value;
-      var password = document.forms["editProfileForm"]["password"].value;
-      var phoneNumber = document.forms["editProfileForm"]["phoneNumber"].value;
-
       var fullNameError = document.getElementById("fullName-error");
-      var emailError = document.getElementById("email-error");
-      var passwordError = document.getElementById("password-error");
-      var phoneNumberError = document.getElementById("phoneNumber-error");
-
-      fullNameError.innerHTML = "";
-      emailError.innerHTML = "";
-      passwordError.innerHTML = "";
-      phoneNumberError.innerHTML = "";
-
       if (fullName == "") {
         fullNameError.innerHTML = "Full Name must be filled out";
-        return false;
+      } else {
+        fullNameError.innerHTML = "";
       }
+    }
 
+    function validateEmail() {
+      var email = document.forms["editProfileForm"]["email"].value;
+      var emailError = document.getElementById("email-error");
       if (!isValidEmail(email)) {
         emailError.innerHTML = "Invalid email address";
-        return false;
+      } else {
+        emailError.innerHTML = "";
       }
+    }
 
+    function validatePassword() {
+      var password = document.forms["editProfileForm"]["password"].value;
+      var passwordError = document.getElementById("password-error");
       if (password.length < 8) {
         passwordError.innerHTML = "Password must be at least 8 characters long";
-        return false;
+      } else {
+        passwordError.innerHTML = "";
       }
+    }
 
+    function validatePhoneNumber() {
+      var phoneNumber = document.forms["editProfileForm"]["phoneNumber"].value;
+      var phoneNumberError = document.getElementById("phoneNumber-error");
       if (!isValidPhoneNumber(phoneNumber)) {
         phoneNumberError.innerHTML = "Please enter a valid 10-digit phone number";
-        return false;
+      } else {
+        phoneNumberError.innerHTML = "";
       }
-
-      return true;
     }
 
     function isValidEmail(email) {
-      // Regular expression for validating email addresses
       var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(email);
     }
 
     function isValidPhoneNumber(phoneNumber) {
-      // Regular expression for validating 10-digit phone numbers
       var phoneRegex = /^[0-9]{10}$/;
       return phoneRegex.test(phoneNumber);
+    }
+
+    function validateForm() {
+      validateFullName();
+      validateEmail();
+      validatePassword();
+      validatePhoneNumber();
+
+      var errors = document.querySelectorAll(".error-message");
+      for (var i = 0; i < errors.length; i++) {
+        if (errors[i].innerHTML !== "") {
+          return false;
+        }
+      }
+
+      return true;
     }
   </script>
 </body>
