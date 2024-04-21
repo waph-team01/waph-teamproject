@@ -26,7 +26,7 @@
           echo "<h2>Error</h2><p>Failed to delete post.</p>";
       }
 
-      header("Refresh:2; url=viewposts.php");
+      header("Refresh:2; url=index.php");
       ?>
     </div>
   </div>
