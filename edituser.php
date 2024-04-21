@@ -42,56 +42,51 @@
   </div>
 
   <script>
+    // Function to validate full name
     function validateFullName() {
       var fullName = document.forms["editProfileForm"]["fullName"].value;
       var fullNameError = document.getElementById("fullName-error");
-      if (fullName == "") {
+      if (fullName.trim() === "") {
         fullNameError.innerHTML = "Full Name must be filled out";
       } else {
         fullNameError.innerHTML = "";
       }
     }
 
+    // Function to validate email
     function validateEmail() {
       var email = document.forms["editProfileForm"]["email"].value;
       var emailError = document.getElementById("email-error");
-      if (!isValidEmail(email)) {
-        emailError.innerHTML = "Invalid email address";
+      if (email.trim() === "") {
+        emailError.innerHTML = "Email must be filled out";
       } else {
         emailError.innerHTML = "";
       }
     }
 
+    // Function to validate password
     function validatePassword() {
       var password = document.forms["editProfileForm"]["password"].value;
       var passwordError = document.getElementById("password-error");
-      if (password.length < 8) {
-        passwordError.innerHTML = "Password must be at least 8 characters long";
+      if (password.trim() === "") {
+        passwordError.innerHTML = "Password must be filled out";
       } else {
         passwordError.innerHTML = "";
       }
     }
 
+    // Function to validate phone number
     function validatePhoneNumber() {
       var phoneNumber = document.forms["editProfileForm"]["phoneNumber"].value;
       var phoneNumberError = document.getElementById("phoneNumber-error");
-      if (!isValidPhoneNumber(phoneNumber)) {
-        phoneNumberError.innerHTML = "Please enter a valid 10-digit phone number";
+      if (phoneNumber.trim() === "") {
+        phoneNumberError.innerHTML = "Phone Number must be filled out";
       } else {
         phoneNumberError.innerHTML = "";
       }
     }
 
-    function isValidEmail(email) {
-      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(email);
-    }
-
-    function isValidPhoneNumber(phoneNumber) {
-      var phoneRegex = /^[0-9]{10}$/;
-      return phoneRegex.test(phoneNumber);
-    }
-
+    // Function to validate the entire form
     function validateForm() {
       validateFullName();
       validateEmail();
@@ -107,6 +102,12 @@
 
       return true;
     }
+
+    // Add event listeners to input fields for instant validation
+    document.getElementsByName("fullName")[0].addEventListener("input", validateFullName);
+    document.getElementsByName("email")[0].addEventListener("input", validateEmail);
+    document.getElementsByName("password")[0].addEventListener("input", validatePassword);
+    document.getElementsByName("phoneNumber")[0].addEventListener("input", validatePhoneNumber);
   </script>
 </body>
 </html>
