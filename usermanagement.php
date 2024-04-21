@@ -3,35 +3,6 @@ session_start();
 
 require_once "database.php"; 
 
-if (isset($_POST["username"]) && isset($_POST["password"])) {
-    $username = $_POST["username"]; 
-    $password = $_POST["password"];
-
-    if (checklogin_mysql($username, $password)) {
-        $_SESSION["authenticated"] = TRUE;
-        $_SESSION["username"] = $username; 
-        $_SESSION["browser"] = $_SERVER["HTTP_USER_AGENT"];
-    } else {
-        session_destroy();
-        echo "<script>alert('Invalid Username or password please recheck');window.location='form.php';</script>";
-        die();
-    }
-}
-
-if (!isset($_SESSION["authenticated"]) || $_SESSION["authenticated"] != TRUE) { 
-    session_destroy();
-    echo "<script>alert('You have not logged in. Please login first');</script>";
-    header("Refresh:0; url=form.php");
-    die();
-}
-
-if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
-    session_destroy();
-    echo "<script>alert('Session hijack detected')</script>"; 
-    header("Refresh:0; url=form.php");
-    die();
-}
-
 // Check if the logged-in user is a superuser
 $userProfile = fetchUserProfile($_SESSION['username']);
 if ($userProfile && $userProfile['superuser'] != 1) {
@@ -190,6 +161,9 @@ if (isset($_POST['action']) && isset($_POST['username'])) {
       echo "<div class='welcome-text'>Welcome " . htmlentities($_SESSION['username']) . "!</div>";
       ?>
       <div class="links">
+        <form id="home" action="home.php" method="POST">
+          <button type="submit">Home</button>
+        </form> 
         <form id="changepasswordform" action="changepasswordform.php" method="POST">
           <input type="hidden" name="username" value="<?php echo urlencode($_SESSION['username']); ?>">
           <button type="submit">Change Password</button>
