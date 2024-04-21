@@ -79,25 +79,11 @@
       background-color: #45a049;
     }
 
-    /* Adjust home button color */
-    button[type="submit"] {
-      background-color: #4CAF50; /* Dark green button color */
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    button[type="submit"]:hover {
-      background-color: #45a049;
-    }
-
     /* Menu options */
     .links {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       margin-bottom: 20px;
     }
 
@@ -124,9 +110,7 @@
 <body>
   <div class="container">
     <div class="links">
-      <div>
-        <?php echo "<div>Welcome " . htmlentities($_SESSION['username']) . "!</div>"; ?>
-      </div>
+      <?php echo "<div>Welcome " . htmlentities($_SESSION['username']) . "!</div>"; ?>
       <div>
         <form id="changepasswordform" action="changepasswordform.php" method="POST">
           <input type="hidden" name="username" value="<?php echo urlencode($_SESSION['username']); ?>">
