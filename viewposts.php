@@ -5,6 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Main Page</title>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0; /* Light green background color */
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
     .post-container {
       margin-bottom: 20px;
     }
@@ -48,16 +68,17 @@
     }
 
     .add-comment-form input[type="submit"] {
-      background-color: #007bff;
-      color: #fff;
+      background-color: #4CAF50; /* Dark green button color */
+      color: white;
       border: none;
       padding: 10px 20px;
       border-radius: 4px;
       cursor: pointer;
+      transition: background-color 0.3s;
     }
 
     .add-comment-form input[type="submit"]:hover {
-      background-color: #0056b3;
+      background-color: #45a049;
     }
   </style>
 </head>
