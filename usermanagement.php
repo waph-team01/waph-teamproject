@@ -7,7 +7,7 @@ require_once "database.php";
 $userProfile = fetchUserProfile($_SESSION['username']);
 if ($userProfile && $userProfile['superuser'] != 1) {
     echo "<script>alert('Access denied. Only superusers can access this page.');</script>";
-    header("Refresh:0; url=form.php");
+    header("Refresh:0; url=index.php");
     die();
 }
 
