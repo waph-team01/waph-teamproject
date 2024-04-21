@@ -71,7 +71,7 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
-      background-color: #007bff;
+      background-color: #4CAF50; /* Green */
       color: white;
       border: none;
       border-radius: 5px;
@@ -79,7 +79,7 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
     }
 
     .links button:hover {
-      background-color: #0056b3;
+      background-color: #45a049; /* Darker green on hover */
     }
 
     .post-container {
@@ -125,7 +125,7 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
     }
 
     .add-comment-form input[type="submit"] {
-      background-color: #007bff;
+      background-color: #4CAF50; /* Green */
       color: white;
       border: none;
       padding: 10px 20px;
@@ -135,7 +135,7 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
     }
 
     .add-comment-form input[type="submit"]:hover {
-      background-color: #0056b3;
+      background-color: #45a049; /* Darker green on hover */
     }
 
     /* Adjust home button color */
@@ -159,15 +159,6 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
     
     .edit-post-form, .delete-post-form {
       display: inline;
-    }
-
-    .edit-delete-comment button {
-      background-color: #007bff; /* Blue */
-      transition: background-color 0.3s;
-    }
-
-    .edit-delete-comment button:hover {
-      background-color: #0056b3; /* Darker blue on hover */
     }
   </style>
 </head>
