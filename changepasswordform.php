@@ -69,7 +69,7 @@
 <body>
   <div class="container">
     <?php
-    require sessionauthentication.php;
+    require "sessionauthentication.php";
     $rand = bin2hex(openssl_random_pseudo_bytes(16));
     $_SESSION["nocsrftoken"] = $rand;
     ?>
