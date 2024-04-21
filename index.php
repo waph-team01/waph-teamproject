@@ -38,30 +38,71 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome Page</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    .welcome-text {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .links form {
+      margin-bottom: 10px;
+    }
+
+    .links button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .links button:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
       <?php
-      echo "<h2>Welcome " . htmlentities($_SESSION['username']) . "!</h2>";
+      echo "<div class='welcome-text'>Welcome " . htmlentities($_SESSION['username']) . "!</div>";
       ?>
       <div class="links">
         <form id="changepasswordform" action="changepasswordform.php" method="POST">
-        <input type="hidden" name="username" value="<?php echo urlencode($_SESSION['username']); ?>">
-        <button type="submit">Change password</button>
+          <input type="hidden" name="username" value="<?php echo urlencode($_SESSION['username']); ?>">
+          <button type="submit">Change Password</button>
         </form>
-          <form id="viewprofileform" action="viewprofile.php" method="POST">
-        <input type="hidden" name="username" value="<?php echo urlencode($_SESSION['username']); ?>">
-        <button type="submit">View/Edit Profile</button>
+        <form id="viewprofileform" action="viewprofile.php" method="POST">
+          <input type="hidden" name="username" value="<?php echo urlencode($_SESSION['username']); ?>">
+          <button type="submit">View/Edit Profile</button>
         </form> 
         <form id="addpostform" action="addpost.php" method="POST">
-        <button type="submit">Add Post</button>
+          <button type="submit">Add Post</button>
         </form>
         <form id="viewpostsform" action="viewposts.php" method="POST">
-        <button type="submit">View Posts</button>
+          <button type="submit">View Posts</button>
         </form>
         <form id="logout" action="logout.php" method="POST">
-        <button type="submit">Logout</button>
+          <button type="submit">Logout</button>
         </form> 
     </div>
   </div>
