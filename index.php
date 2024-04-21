@@ -188,18 +188,18 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
         while ($row = $posts->fetch_assoc()) {
             echo "<div class='post-container'>";
             echo "<div class='post'>";
-            echo "<h3>" . htmlspecialchars($row['username']) . "posted on " . $row['postDate'] . "</h3>";
+            echo "<h3>" . htmlspecialchars($row['username']) . " posted on " . $row['postDate'] . "</h3>";
             echo "<p>" . htmlspecialchars($row['postContent']) . "</p>";
 
             if ($row['username'] == $_SESSION['username']) {
-               <form action="editpost.php" method="POST" class="edit-post-form">
-                <input type="hidden" name="postID" value="<?php echo $row['postID']; ?>">
-                <button type="submit">Edit</button>
-                </form>
-                <form action="deletepost.php" method="POST" class="delete-post-form">
-                <input type="hidden" name="postID" value="<?php echo $row['postID']; ?>">
-                <button type="submit">Delete</button>
-                </form>
+                echo "<form action='editpost.php' method='POST' class='edit-post-form'>";
+                echo "<input type='hidden' name='postID' value='" . $row['postID'] . "'>";
+                echo "<button type='submit'>Edit</button>";
+                echo "</form>";
+                echo "<form action='deletepost.php' method='POST' class='delete-post-form'>";
+                echo "<input type='hidden' name='postID' value='" . $row['postID'] . "'>";
+                echo "<button type='submit'>Delete</button>";
+                echo "</form>";
             }
 
             echo "<h4>Comments:</h4>";
@@ -213,7 +213,7 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
             if ($comments->num_rows > 0) {
                 while ($commentRow = $comments->fetch_assoc()) {
                     echo "<div class='comment'>";
-                    echo "<p>" . htmlspecialchars($commentRow['username']) . "commented on " . $commentRow['commentDate'] . "</p>";
+                    echo "<p>" . htmlspecialchars($commentRow['username']) . " commented on " . $commentRow['commentDate'] . "</p>";
                     echo "<p>" . htmlspecialchars($commentRow['commentContent']) . "</p>";
                     echo "</div>";
                 }
