@@ -68,6 +68,7 @@
       <button type="submit">Home</button>
     </form>
     <?php
+    session_start();
     require "sessionauthentication.php";
     require "database.php";
 
