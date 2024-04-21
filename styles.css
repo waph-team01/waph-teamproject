@@ -1,67 +1,71 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Modern and clean font */
-  background-color: #2c3e50; /* Deep blue-grey background */
-  background-image: linear-gradient(315deg, #2c3e50 0%, #4a69bd 74%); /* Gradient background */
-  color: #ecf0f1; /* Soft white text */
+  font-family: Arial, sans-serif;
+  background-color: #f0fff0;
 }
 
 .container {
-  display: flex; /* Using flex for better control over alignment */
-  align-items: center; /* Center items vertically */
-  justify-content: flex-start; /* Align items to the left */
-  padding-left: 5%; /* Padding from the left for non-central alignment */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
 .card {
-  background-color: #34495e; /* Dark blue card background */
-  padding: 40px; /* More padding for a spacious feel */
-  border-radius: 20px; /* Very rounded corners for a modern look */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-  width: 320px; /* Standard width for the card */
-  margin-right: auto; /* Push everything to the left */
-  border-left: 5px solid #8e44ad; /* Accent border on the left */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px; 
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  width: 300px;
 }
 
 h2 {
-  color: #ffffff; /* White color for heading */
-  font-size: 22px; /* Adjusting font size */
-  text-align: left; /* Align text to the left */
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333333; 
 }
 
 .input-group {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 label {
-  font-weight: 400; /* Less bold for modern appearance */
-  color: #bdc3c7; /* Light grey for labels */
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333333; 
 }
 
 .text_field {
-  background-color: #ffffff; /* Light background for input fields */
-  color: #2c3e50; /* Dark text for contrast */
-  border: 2px solid #95a5a6; /* Solid border */
-  box-shadow: none; /* No box shadow for a clean look */
+  width: calc(100% - 22px); 
+  padding: 10px;
+  border: 1px solid #cccccc; 
+  border-radius: 5px;
 }
 
 .button {
-  background-color: #3498db; /* Vivid blue for the button */
-  color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50; 
+  color: #ffffff; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .button:hover {
-  background-color: #2980b9; /* Darker blue on hover */
+  background-color: #45a049; 
 }
 
 .registration-link {
-  color: #ecf0f1; /* Keeping link color consistent with the body text */
-  font-size: 14px; /* Smaller font size for subtlety */
+  text-align: center;
+  margin-top: 10px;
 }
 
 .registration-link span {
-  color: #bdc3c7; /* Light grey for span within link */
+  margin-right: 5px;
+  color: #333333;
 }
