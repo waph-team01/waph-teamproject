@@ -128,16 +128,64 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
     button[type="submit"]:hover {
       background-color: #45a049;
     }
+
+    /* Menu options */
+    .links {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .links form {
+      margin-bottom: 10px;
+    }
+
+    .links button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .links button:hover {
+      background-color: #45a049;
+    }
   </style>
 </head>
 <body>
   <div class="container">
+    <div class="links">
+      <div>
+        <?php echo "<div>Welcome " . htmlentities($_SESSION['username']) . "!</div>"; ?>
+      </div>
+      <div>
+        <form id="changepasswordform" action="changepasswordform.php" method="POST">
+          <input type="hidden" name="username" value="<?php echo urlencode($_SESSION['username']); ?>">
+          <button type="submit">Change Password</button>
+        </form>
+        <form id="viewprofileform" action="viewprofile.php" method="POST">
+          <input type="hidden" name="username" value="<?php echo urlencode($_SESSION['username']); ?>">
+          <button type="submit">View/Edit Profile</button>
+        </form> 
+        <form id="addpostform" action="addpost.php" method="POST">
+          <button type="submit">Add Post</button>
+        </form>
+        <form id="logout" action="logout.php" method="POST">
+          <button type="submit">Logout</button>
+        </form> 
+      </div>
+    </div>
+
     <h1>Posts</h1> 
-    <form action="index.php" method="GET">
-      <button type="submit">Home</button>
-    </form>
 
     <?php
+    require "sessionauthentication.php";
+    require "database.php";
+
     $posts = $mysqli->query("SELECT p.postID, p.postContent, p.postDate, u.username
                              FROM posts p
                              JOIN users u ON p.username = u.username
@@ -185,24 +233,6 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
         echo "<p>No posts found.</p>";
     }
     ?>
-
-    <!-- Menu options -->
-    <div class="links">
-      <form id="changepasswordform" action="changepasswordform.php" method="POST">
-        <input type="hidden" name="username" value="<?php echo urlencode($_SESSION['username']); ?>">
-        <button type="submit">Change Password</button>
-      </form>
-      <form id="viewprofileform" action="viewprofile.php" method="POST">
-        <input type="hidden" name="username" value="<?php echo urlencode($_SESSION['username']); ?>">
-        <button type="submit">View/Edit Profile</button>
-      </form> 
-      <form id="addpostform" action="addpost.php" method="POST">
-        <button type="submit">Add Post</button>
-      </form>
-      <form id="logout" action="logout.php" method="POST">
-        <button type="submit">Logout</button>
-      </form> 
-    </div>
   </div>
 </body>
 </html>
