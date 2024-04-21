@@ -64,11 +64,18 @@
     .button:hover {
       background-color: #45a049;
     }
+
+    .error-message {
+      color: red;
+      font-size: 12px;
+      margin-top: 5px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <?php
+    session_start();
     require "sessionauthentication.php";
     $rand = bin2hex(openssl_random_pseudo_bytes(16));
     $_SESSION["nocsrftoken"] = $rand;
@@ -77,7 +84,7 @@
     <form action="changepassword.php" method="POST" class="form login" onsubmit="return validatePassword()">
       <div class="input-group">
         <label for="username">Username:</label>
-        <input type="text" class="text_field" name="username" value="<?php echo isset($_GET['username']) ? htmlentities($_GET['username']) : ''; ?>" readonly />
+        <input type="text" class="text_field" name="username" value="<?php echo isset($_SESSION['username']) ? htmlentities($_SESSION['username']) : ''; ?>" readonly />
       </div>
       <div class="input-group">
         <label for="password">Current Password:</label>
@@ -85,11 +92,13 @@
       </div>
       <div class="input-group">
         <label for="newpassword">New Password:</label>
-        <input type="password" class="text_field" name="newpassword" id="newpassword" />
+        <input type="password" class="text_field" name="newpassword" id="newpassword" oninput="checkPasswordFormat(this)" />
+        <div class="error-message" id="newpassword-error"></div>
       </div>
       <div class="input-group">
         <label for="confirmpassword">Confirm New Password:</label>
-        <input type="password" class="text_field" name="confirmpassword" id="confirmpassword" />
+        <input type="password" class="text_field" name="confirmpassword" id="confirmpassword" oninput="checkPasswordMatch()" />
+        <div class="error-message" id="confirmpassword-error"></div>
       </div>
       <div>
         <input type="hidden" name="nocsrftoken" value="<?php echo $rand; ?>"/>
@@ -103,18 +112,49 @@
     function validatePassword() {
       var newPassword = document.getElementById("newpassword").value;
       var confirmPassword = document.getElementById("confirmpassword").value;
+      var newPasswordError = document.getElementById("newpassword-error");
+      var confirmPasswordError = document.getElementById("confirmpassword-error");
+      
+      // Check if passwords match
+      if (newPassword !== confirmPassword) {
+        confirmPasswordError.textContent = "Passwords do not match.";
+        return false;
+      }
+      
+      // Check password format
+      if (newPassword.length < 8 || !/[A-Z]/.test(newPassword) || !/[!@#$%^&*()_+\-=\[\]{};':\\|,.<>\/?]+/.test(newPassword) || !/\d/.test(newPassword)) {
+        newPasswordError.textContent = "Password must be at least 8 characters long and contain at least one capital letter, one symbol, and one digit.";
+        return false;
+      }
+      
+      // Clear error messages
+      newPasswordError.textContent = "";
+      confirmPasswordError.textContent = "";
+      
+      return true;
+    }
+
+    function checkPasswordFormat(input) {
+      var newPassword = input.value;
+      var newPasswordError = document.getElementById("newpassword-error");
 
       if (newPassword.length < 8 || !/[A-Z]/.test(newPassword) || !/[!@#$%^&*()_+\-=\[\]{};':\\|,.<>\/?]+/.test(newPassword) || !/\d/.test(newPassword)) {
-        alert("Password must be at least 8 characters long and contain at least one capital letter, one symbol, and one digit.");
-        return false;
+        newPasswordError.textContent = "Password must be at least 8 characters long and contain at least one capital letter, one symbol, and one digit.";
+      } else {
+        newPasswordError.textContent = "";
       }
+    }
+
+    function checkPasswordMatch() {
+      var newPassword = document.getElementById("newpassword").value;
+      var confirmPassword = document.getElementById("confirmpassword").value;
+      var confirmPasswordError = document.getElementById("confirmpassword-error");
 
       if (newPassword !== confirmPassword) {
-        alert("Passwords do not match.");
-        return false;
+        confirmPasswordError.textContent = "Passwords do not match.";
+      } else {
+        confirmPasswordError.textContent = "";
       }
-
-      return true;
     }
   </script>
 </body>
