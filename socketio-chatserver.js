@@ -15,5 +15,7 @@ function httphandler (request, response) {
 socketio.on('connection', function (socketclient) {
   console.log("A new socket.IO client is connected: "+ 
 	       socketclient.client.conn.remoteAddress+": "+
-	       socketclient.id); 
+	       socketclient.id);
+		socketclinet.on("message",(data)=>{
+			console.log("Received data: "+data);
 });
