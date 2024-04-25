@@ -19,3 +19,5 @@ socketio.on('connection', function (socketclient) {
 		socketclinet.on("message",(data)=>{
 			console.log("Received data: "+data);
 });
+
+socketio.emit("message",data);
