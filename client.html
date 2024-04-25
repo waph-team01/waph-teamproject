@@ -12,9 +12,9 @@
     } else {
         alert("HTML5 WebSocket is not supported");
     }
-    var myWebSocket = new WebSocket('wss://echo.websocket.org');
+    var myWebSocket = io();
         myWebSocket.onopen = function() { 
-    	console.log('WebSocket opened'); 
+    	console.log('WebSocket opened');
     }
     myWebSocket.onmessage = function(msg) {
         console.log('Received from server: '+ msg.data);
