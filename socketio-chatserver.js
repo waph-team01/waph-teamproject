@@ -13,7 +13,7 @@ console.log("HTTP server is listening on port " + port);
 function httphandler(request, response) {
   response.writeHead(200); // 200 OK 
   // Ensure you have the front-end UI client.html
-  const clientUI_stream = fs.createReadStream('./client.html');
+  const clientUI_stream = fs.createReadStream('/var/www/waph-teamproject/client.html');
   clientUI_stream.pipe(response);
 }
 
