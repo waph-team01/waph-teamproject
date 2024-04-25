@@ -1,5 +1,5 @@
-# Source code to Markdown
-This file is automatically created by a script. Please delete this line and replace with the course and your team information accordingly.
+# Source code of TEAM-01 
+Below is the source code for all the files used to develop mini facebook final project
 ## updateuser.php
 ```php
 <?php 
