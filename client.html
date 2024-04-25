@@ -25,7 +25,7 @@
     }
     function doSend(msg){
         if (myWebSocket) {
-            myWebSocket.send(msg);
+            myWebSocket.emit("message",msg);
             console.log('Sent to server: ' +msg);
         }
     }
