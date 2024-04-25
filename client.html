@@ -16,10 +16,10 @@
         myWebSocket.onopen = function() { 
     	console.log('WebSocket opened');
     }
-    myWebSocket.onmessage = function(msg) {
-        console.log('Received from server: '+ msg.data);
-        document.getElementById("receivedmessage").innerHTML += msg.data + "<br>";
-    }
+    myWebSocket.on("message" , function(msg) {
+        console.log('Received from server: '+ msg);
+        document.getElementById("receivedmessage").innerHTML += msg + "<br>";
+    });
     myWebSocket.onclose = function() { 
     	console.log('WebSocket closed');
     }
