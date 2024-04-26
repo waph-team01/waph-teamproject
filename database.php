@@ -91,9 +91,11 @@ function updatePost($postID, $postContent) {
 
 function deletePost($postID) {
     global $mysqli;
+    
     $prepared_sql1 = "DELETE FROM comments WHERE postID = ?";
     $stmt1 = $mysqli->prepare($prepared_sql1);
     $stmt1->bind_param("i", $postID);
+    $stmt1->execute();
 
     $prepared_sql = "DELETE FROM posts WHERE postID = ?";
     $stmt = $mysqli->prepare($prepared_sql);
