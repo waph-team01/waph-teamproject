@@ -17,6 +17,7 @@ Source code repository (private access): [Click_here](https://github.com/waph-te
 
 Project homepage (public): [Click_here](https://github.com/waph-team01/waph-team01.github.io)
 
+Project homepage (public) & video demonstration: [https://github.com/waph-team01/waph-team01.github.io](https://github.com/waph-team01/waph-team01.github.io)
 
 ## Revision History
 
@@ -121,6 +122,11 @@ Utilizing cookies for managing session information and enhancing user experience
 Handling session data to maintain user context and interactions.
 
 # Database:
+
+![tables which stores the data](https://github.com/waph-team01/waph-teamproject/assets/156159822/21a38ea6-5874-4150-ad10-ccef4cb45045)
+
+![user tables](https://github.com/waph-team01/waph-teamproject/assets/156159822/9bcdf0cb-0f5e-4777-a319-df8fc4b58437)
+
 
 ## Scrum process
 
