@@ -20,18 +20,65 @@ Project homepage (public): [Click_here](https://github.com/waph-team01/waph-team
 
 ## Revision History
 
-| Date       |   Version     |  Description |
-|------------|:-------------:|-------------:|
-| 26/03/2024 |  0.0          | Init draft   |
-| 31/03/2024 |  0.1          | Drafting template   |
+| Date       |   Version     |  Description     |
+|------------|:-------------:|-------------:    |
+| 26/03/2024 |  0.0          | Init draft       |
+| 31/03/2024 |  0.1          | Drafting template|
+| 04/01/2024 |  1.0          |  Sprint 1 update |
+| 04/22/2024 |  2.0          | Sprint 2 update  | 
+| 04/24/2024 | 3.0	     | Sprint 3 update  |
+
 
 
 # Overview
-The mian task of the WAPH procject deals about an inclusive development of a web application called "MiniFacebook". The process od development of the web applications includes a schematic usage of full stack web development learnings and cybersecurity principles which is used for securing the web application by not making it vulnerable for hackers. The website is being developed by our team which constitutes of four members of same class. We used Whatsapp as a channel to communicate and most of our discussion made in physical sessions. We used collobartive notes which can be accessed by all of our teammates where we use that one for the porject discussions, ideas and thoughts for the progress of the project. 
+The primary focus of the WAPH project revolves around creating an all-encompassing web application named "MiniFacebook." The development process of this web application incorporates comprehensive full-stack web development techniques and cybersecurity principles to ensure its resilience against potential vulnerabilities exploited by hackers. Our team, comprised of four classmates, collaboratively worked on the website's development. We primarily utilized WhatsApp for communication, supplemented by in-person meetings for discussions. Additionally, we employed collaborative note-taking tools accessible to all team members, facilitating project discussions, idea generation, and progress tracking.
+
+# User Interface
+## Front-End:
+### Edit & View Profile Feature:
+Users can view their profile, and  modify their full name, email, and phone number.
+### Change Password Option: 
+Users can change their password if facing any issues.
+### Posts Visibility Setting: 
+Upon logging in, users can view site's posted content 
+### Add posts : 
+Users have the ability to post content , edit and delete their own posts.
+### Add comments :
+Users can add comments on all the posts that are visibile to them.
+### Super users: 
+Only super users have access to a specific page called user management , where he can view all the registered users and edit their access to the application.
+## Back-End:
+### Database Creation: 
+Established a database with essential tables for the application.
+### Users Table: 
+Stores user information including full name, username, password, email, and phone number.
+### Posts Table: 
+Records posts from various users, containing fields like Post ID, Title, Content, Post Date, and Owner.
+### Database Integration: 
+Connected the database with the front end to save user inputs.
+Implementation
+
+# Security Analysis
+•	The whole application is deployed over HTTPS
+
+•	All the passwords are hashed before inserting into the database. 
+
+•	Added client side and server side validations in the applications
+
+•	All the user inputs are validated , and sanitized before being used or displayed in the code.
+
+•	Strict security validations are implemented and forced to enter values in the required formats to minimize XSS attacks.
+
+•	In the password management page a CSRF token is passed as a hidden parameter and validated at the server side to detect and counter CSRF attacks.
+
+•	All the SQL queries are run as prepared statements and values are binded before executing to minimize SQL injection attacks.
+
+•	Altered the user table to add two new columns one for super user and the other for enable_status of the account . Only the super users have the value 1 and default value is 0 . The super users can disable the access for other users to the application.
+
 
 # System Analysis
 
-For the initial phase of the project we developed the website using the system config file which is being used and edited for the WAPH-team project file. Hosts file in etc folder is udpated with the public url waph-team01.minifacebook.com adjacent to the I.P Address. After the creation of the website the web application is being accessed by our team members and the  demo screenshots are provided below. 
+During the initial phase that is for the sprint 0 of the project, we constructed the website utilizing the system configuration file, which was utilized and modified for the WAPH-team project file. The hosts file in the etc folder was updated with the public URL: [https://github.com/waph-team01/waph-teamproject](https://waph-team01.minifacebook.com/) alongside the IP address. 
 
 # Snippets of the test pages (Demo)
 
@@ -48,17 +95,38 @@ For the initial phase of the project we developed the website using the system c
 ![test page of pashamsp](Images/Sprint0/pashamsp1.png)
 
 
-# Software Process Management
+# Functional Requirements
 
-_(starting from sprint 0, and updates)_
+## Features for posting like images and texts: 
+Enabling users to create and share posts with images/texts.
+## Database setup: 
+Configuring database system for storing application data securely.
+## Notification add on:
+Implementing notification system for relevant user alerts.
+## Forms for authentication and user registration:  
+Implementing secure login and registration forms for user access.
+## Search functionality: 
+Enabling users to search for specific content within application.
+## Messaging features: 
+Integrating private messaging functionalities for user communication.
+
+# Non - Functional Requirements
+## Error handling: 
+Managing errors for smoother user experience and application stability.
+## Implementing security features: 
+Strengthening application security through implementation of various security measures.
+## Cookies:
+Utilizing cookies for managing session information and enhancing user experience.
+## Session information: 
+Handling session data to maintain user context and interactions.
+
+# Database:
 
 ## Scrum process
 
-Our team, comprised of four classmates, employs a combination of WhatsApp and face-to-face interactions to facilitate our website development endeavors. WhatsApp serves as our primary communication platform, enabling quick exchanges and discussions, while physical meetings provide opportunities for more in-depth brainstorming sessions. Additionally, we utilize collaborative notes accessible to all team members, serving as a central hub for project-related discussions, idea generation, and progress tracking. This collaborative environment fosters creativity and ensures everyone's input is heard and considered. By leveraging these communication channels effectively, we maintain alignment on project goals, distribute tasks efficiently, and address challenges collaboratively. Our collective efforts are focused on driving the website development forward, harnessing the diverse skills and perspectives of each team member to achieve our shared vision for the project's success.
-
 ### Sprint 0
 
-Duration: 22/03/2024-03/31/2024
+Duration: 03/22/2024-03/31/2024
 
 #### Completed Tasks: 
 
@@ -76,9 +144,69 @@ Duration: 22/03/2024-03/31/2024
 3. Grahika Rampudi, 8 commits, 7 hours, contributed in creating the personal page of our team which includes details of our team members.
 4. Sai Sandeep Pasham, 7 commits, 6 hours, contributed in creating the database-data.sql, index.html page which includes the details of admin login. 
 
+
+### Sprint 1
+
+Duration: 03/28/2024-04/01/2024
+
+#### Completed Tasks: 
+
+1.	Established the database according to the outlined criteria.
+2.	Developed both login and registration forms.
+3.	Executed fundamental features for authenticated users, such as password modification.
+
+
+#### Contributions: 
+
+1. Tulasiram Nakkanaboina, 11 commits, 7 hours, contributed in creating user registration and profile edit php files snd further developed index.php file
+2. Vihasith Rasala, 15 commits, 6 hours, contributed in documentation of
+README file and organizing the data. Created and developed logout php file. 
+3. Grahika Rampudi, 8 commits, 7 hours, contributed in creating and organizing the database and it’s implementation in back end of web application. 
+4. Sai Sandeep Pasham, 7 commits, 6 hours, contributed in creating the change password and login php files.
+
+# Sprint 1 Retrospection
+•	The main problem we faced for a team call is unmatched schedule of team members. We are usually doing our team meetings in late nights.
+•	Online calls didn’t meet the expected progress of the project, so we are making ourselves available for physical sessions which is difficult.
+•	Proper collaborative dashboards require premium subscriptions for third party applications.
+•	Sandbox doesn’t work properly which is a dot in a white page.
+•	Team members use different OS like MacOS or windows where it’s difficult to work in virtual machine setup if it’s a Macbook.
+
+### Sprint 2
+
+Duration: 04/15/2024-04/22/2024
+
+#### Completed Tasks: 
+
+1.Updated the database design and implemention to incorporate new posts,edits, deletion and user management access.
+2.Logged-in users can add a new post, and add a comment on any post
+3.Logged in users can edit their own post and the user cannot edit post of other users.
+
+
+#### Contributions: 
+
+1. Tulasiram Nakkanaboina, 22commits, 14 hours, contributed in creating usermanagement.php and updated index.php,  viewprofile,  edituser php files ,modified style.css to give new appearance to the application.
+2. Vihasith Rasala, 18 commits, 10hours, contributed in updating the Edituser.php, viewpost.php, addpost.php, and insertpost.php. 
+3. Grahika Rampudi, 19commits, 11 hours, contributed in updating the index.php, deletepost.php, edituser.php, database.php. 
+4. Sai Sandeep Pasham, 17 commits, 9 hours, contributed in updating addcomment.php , Insertpost.php, edituser.php, Index.php and documentation of README file and organizing the data.
+
+
+# Sprint 2 Retrospection
+•	The whole sprint went well we were able to achieve the targets we have set before the start of the sprint.
+•	All the team members have contributed equally for the project.
+•	Sometimes the team members had the time conflicts which has delayed the work a bit
+•	This sprint has been wonderful learning experience with the database and handling php code, though few team members have minimal knowledge over this topics.
+
+
+#Demo Screenshots
+
+
+
+
+
 # Appendix
 
-**(i) database-account.sql code**
+**(i) updateuser.php**
+![image](https://github.com/waph-team01/waph-teamproject/assets/156159822/3cb74aa6-73da-4c43-9847-e6d40fbd0dce)
 
 ```SQL
 create database waph_team;
