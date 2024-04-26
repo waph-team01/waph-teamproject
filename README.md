@@ -17,8 +17,9 @@ Source code repository (private access): [Click_here](https://github.com/waph-te
 
 Project homepage (public): [Click_here](https://github.com/waph-team01/waph-team01.github.io)
 
-Project homepage (public) & video demonstration: [https://github.com/waph-team01/waph-team01.github.io](https://github.com/waph-team01/waph-team01.github.io)
+Project homepage (public) & video demonstration: [waph-team01.github.io](waph-team01.github.io)
 
+Video demonstration URL : [TEAM 01 Presentation](https://youtu.be/NaG5abXJQZg)
 ## Revision History
 
 | Date       |   Version     |  Description     |
