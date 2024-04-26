@@ -81,7 +81,7 @@ Implementation
 
 During the initial phase that is for the sprint 0 of the project, we constructed the website utilizing the system configuration file, which was utilized and modified for the WAPH-team project file. The hosts file in the etc folder was updated with the public URL: [https://github.com/waph-team01/waph-teamproject](https://waph-team01.minifacebook.com/) alongside the IP address. 
 
-# Snippets of the test pages (Demo)
+# Demo Screenshots of Sprint0
 
 ![admin login](Images/Sprint0/admin.png)
 
