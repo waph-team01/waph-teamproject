@@ -8,7 +8,7 @@
 
 1. Tulasiram Nakkanaboina,   nakkantm@mail.uc.edu
 2. Vihasith Rasala,          rasalavh@mail.uc.edu
-3. Grahika Rampudi,          Rampudga@mail.uc.edu
+3. Grahika Rampudi,          rampudga@mail.uc.edu
 4. Sai Sandeep Pasham,       pashamsp@mail.uc.edu
 
 # Project Management Information
