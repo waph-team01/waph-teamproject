@@ -181,7 +181,7 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
         <form id="usermanagementform" action="usermanagement.php" method="POST">
             <button type="submit">User Management</button>
         </form> 
-        <form id="socketio Chat" action="http://localhost:8080" method="GET">
+        <form id="socketio Chat" action="http://localhost:8080" method="POST">
             <button type="submit">Broadcast Chat</button>
         </form> 
         <form id="logout" action="logout.php" method="POST">
