@@ -138,7 +138,6 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
       background-color: #45a049; /* Darker green on hover */
     }
 
-    /* Adjust home button color */
     button[type="submit"] {
       background-color: #4CAF50; /* Green */
       color: white;
@@ -180,7 +179,10 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
           <button type="submit">View/Edit Profile</button>
         </form> 
         <form id="usermanagementform" action="usermanagement.php" method="POST">
-        <button type="submit">User Management</button>
+            <button type="submit">User Management</button>
+        </form> 
+        <form id="socketio Chat" action="http://localhost:8080" method="GET">
+            <button type="submit">Broadcast Chat</button>
         </form> 
         <form id="logout" action="logout.php" method="POST">
           <button type="submit">Logout</button>
